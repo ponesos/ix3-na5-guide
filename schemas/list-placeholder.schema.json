@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ix3-na5/schemas/list-placeholder.schema.json",
+  "title": "Placeholder list",
+  "type": "object",
+  "required": ["vehicleId", "status", "items"],
+  "properties": {
+    "vehicleId": { "type": "string" },
+    "status": { "type": "string", "enum": ["placeholder", "ready"] },
+    "updatedAt": { "type": "string" },
+    "items": { "type": "array" }
+  }
+}

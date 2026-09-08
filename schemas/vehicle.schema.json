@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ix3-na5/schemas/vehicle.schema.json",
+  "title": "Vehicle",
+  "type": "object",
+  "required": ["id", "codeName", "displayNameKo", "platform", "markets", "sources"],
+  "properties": {
+    "id": { "type": "string" },
+    "codeName": { "type": "string" },
+    "displayNameKo": { "type": "string" },
+    "displayNameEn": { "type": "string" },
+    "platform": { "type": "string" },
+    "bodyType": { "type": "string" },
+    "notesKo": { "type": "string" },
+    "markets": {
+      "type": "object",
+      "required": ["kr"],
+      "properties": {
+        "kr": { "$ref": "#/$defs/krMarket" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "asOf"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "asOf": { "type": "string" },
+          "kind": { "type": "string", "enum": ["press", "official", "local-pdf", "other"] },
+          "noteKo": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "krMarket": {
+      "type": "object",
+      "required": ["powertrain", "trims", "performance", "range", "charging", "priceDisclaimerKo"],
+      "properties": {
+        "onSale": { "type": "boolean" },
+        "powertrain": { "type": "string" },
+        "priceDisclaimerKo": { "type": "string" },
+        "seats": { "type": "number" },
+        "drive": { "type": "string" },
+        "dimensionsMm": {
+          "type": "object",
+          "properties": {
+            "length": { "type": "number" },
+            "width": { "type": "number" },
+            "height": { "type": "number" },
+            "wheelbase": { "type": "number" }
+          }
+        },
+        "weightKg": {
+          "type": "object",
+          "properties": {
+            "curb": { "type": "number" },
+            "gross": { "type": "number" }
+          }
+        },
+        "battery": {
+          "type": "object",
+          "properties": {
+            "grossKwh": { "type": "number" },
+            "chemistryNoteKo": { "type": "string" },
+            "efficiencyKmPerKwhMin": { "type": "number" },
+            "efficiencyKmPerKwhMax": { "type": "number" }
+          }
+        },
+        "cargo": {
+          "type": "object",
+          "properties": {
+            "trunkLMin": { "type": "number" },
+            "trunkLMax": { "type": "number" },
+            "frunkL": { "type": "number" }
+          }
+        },
+        "trims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "nameKo"],
+            "properties": {
+              "id": { "type": "string" },
+              "nameKo": { "type": "string" },
+              "priceKrw": { "type": ["number", "null"] },
+              "priceKrwMin": { "type": "number" },
+              "priceKrwMax": { "type": "number" },
+              "priceTaxBasisKo": { "type": "string" },
+              "wheelKo": { "type": "string" },
+              "highlightsKo": { "type": "array", "items": { "type": "string" } },
+              "exteriorColors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": { "type": "string" },
+                    "nameKo": { "type": "string" }
+                  }
+                }
+              },
+              "interiorColors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": { "type": "string" },
+                    "nameKo": { "type": "string" }
+                  }
+                }
+              },
+              "notesKo": { "type": "string" }
+            }
+          }
+        },
+        "performance": {
+          "type": "object",
+          "properties": {
+            "systemKw": { "type": "number" },
+            "systemHp": { "type": "number" },
+            "torqueNm": { "type": "number" },
+            "torqueKgm": { "type": "number" },
+            "accel0to100Sec": { "type": "number" },
+            "topSpeedKmh": { "type": "number" },
+            "dragCd": { "type": "number" }
+          }
+        },
+        "range": {
+          "type": "object",
+          "properties": {
+            "koreaCertifiedKm": { "type": "number" },
+            "koreaCertifiedKmMin": { "type": "number" },
+            "wltpKm": { "type": "number" }
+          }
+        },
+        "charging": {
+          "type": "object",
+          "properties": {
+            "architectureV": { "type": "number" },
+            "acKw": { "type": "number" },
+            "dcKwMin": { "type": "number" },
+            "dcKwMax": { "type": "number" },
+            "dc10to80Minutes": { "type": "number" },
+            "ac0to100Hours": { "type": "number" },
+            "bidirectional": { "type": "boolean" },
+            "notesKo": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

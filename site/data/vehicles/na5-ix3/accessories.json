@@ -1,0 +1,221 @@
+{
+  "vehicleId": "na5-ix3",
+  "updatedAt": "2026-09-08",
+  "items": [
+    {
+      "id": "panorama-roof-shade",
+      "oemPartNumber": "51465B72889",
+      "titleKo": "파노라마 루프 차양",
+      "titleOriginal": "Verschattung Panoramadach für BMW iX3 (NA5)",
+      "titleOriginalLang": "de",
+      "summaryKo": "글라스 루프를 가려 강한 일사 시 실내 열 부담을 줄이는 후장착 차양입니다. 세 조각이 이어진 접이식 구조로, 구성품에 보관 가방이 포함됩니다. 공식 페이지 기준 무게 약 680g, 재질은 3겹 직물(ION 타입)입니다.",
+      "category": "interior",
+      "fitmentNotes": "SA 408 파노라마 루프(클라이밋 컴포트 글라스)에 해당. 장착 방향은 ‘Front Top’ 표시를 따릅니다. QR로 장착 안내 영상에 연결됩니다.",
+      "disclaimer": "한국 미판매·미재고일 수 있습니다. 딜러가 VIN으로 적합성을 확인해야 합니다.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "DE",
+          "sourceUrl": "https://www.bmw.de/de/shop/ls/dp/physical-goods/903246",
+          "price": 200,
+          "currency": "EUR",
+          "asOf": "2026-09-08",
+          "shopProductId": "903246"
+        }
+      ]
+    },
+    {
+      "id": "luggage-compartment-molded-mat",
+      "oemPartNumber": "51475B44A17",
+      "titleKo": "트렁크 성형 매트",
+      "titleOriginal": "BMW Gepäckraum-Formmatte für iX3 (NA5)",
+      "titleOriginalLang": "de",
+      "summaryKo": "가장자리가 높은 미끄럼 방지·발수 성형 매트로 적재함을 오염·습기·긁힘으로부터 가립니다. 고정 고리(래싱 아이) 접근은 유지된다고 공식 설명이 적혀 있습니다. NA5 전용 1장 구성입니다.",
+      "category": "cargo",
+      "fitmentNotes": "더 뉴 iX3 (NA5) 적재함. 기본 실내와 맞춘다는 공식 설명입니다. 트림별 바닥 형상 차이는 딜러 확인이 안전합니다.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "DE",
+          "sourceUrl": "https://www.bmw.de/de/shop/ls/dp/physical-goods/903243",
+          "price": 180,
+          "currency": "EUR",
+          "asOf": "2026-09-08",
+          "shopProductId": "903243"
+        }
+      ]
+    },
+    {
+      "id": "luggage-compartment-reversible-mat",
+      "oemPartNumber": "51475B44A44",
+      "titleKo": "트렁크 양면 매트",
+      "titleOriginal": "BMW Gepäckraum-Wendematte für iX3 (NA5)",
+      "titleOriginalLang": "de",
+      "summaryKo": "양면 사용 트렁크 매트입니다. 카펫 면에는 고정 요소로 화물을 고정하고, 뒷면은 젖거나 더러운 적재에 쓰며 물세척이 가능하다고 공식 설명이 적혀 있습니다. NA5 전용 구성입니다.",
+      "category": "cargo",
+      "fitmentNotes": "더 뉴 iX3 (NA5) 적재함. 성형 매트(51475B44A17)와 별도 상품입니다.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "DE",
+          "sourceUrl": "https://www.bmw.de/de/shop/ls/dp/physical-goods/903244",
+          "price": 180,
+          "currency": "EUR",
+          "asOf": "2026-09-08",
+          "shopProductId": "903244"
+        }
+      ]
+    },
+    {
+      "id": "mode3-charge-cable-1ph-5m",
+      "oemPartNumber": "61905A13025",
+      "titleKo": "Mode 3 충전 케이블 (단상, 5m)",
+      "titleOriginal": "BMW LADEKABEL MODE 3 (1-PHASIG, 5 M)",
+      "titleOriginalLang": "de",
+      "summaryKo": "Mode 3를 지원하는 공용 충전기에서 쓰는 5m 케이블입니다. 유럽 ECE 규격 커넥터 기준 설명이 있으며, 구성은 케이블과 가방입니다. NA5 전용 부품이 아니라 BEV·PHEV 공용 성격이므로 VIN 확인이 필요합니다.",
+      "category": "charging",
+      "fitmentNotes": "NA5 전용이 아닙니다. 한국 사양 충전구·케이블 포함 여부와 다를 수 있습니다. 구형 iX3(G08)용 케이블과 품번이 다를 수 있으니 혼동하지 않습니다.",
+      "disclaimer": "공용 충전 액세서리. 국내 표준·포함 사양과 다를 수 있습니다.",
+      "na5Dedicated": false,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "DE",
+          "sourceUrl": "https://www.bmw.de/de/shop/ls/dp/physical-goods/734064",
+          "price": 315,
+          "currency": "EUR",
+          "asOf": "2026-09-08",
+          "shopProductId": "734064"
+        }
+      ]
+    },
+    {
+      "id": "winter-wheel-20-star-1045",
+      "oemPartNumber": "5B778F5",
+      "titleKo": "20인치 윈터휠 세트 Star Spoke 1045",
+      "titleOriginal": "20 inch Star Spoke 1045 winterwielset",
+      "titleOriginalLang": "nl",
+      "summaryKo": "NA5용 20인치 윈터 휠·타이어 세트입니다. 휠 컬러 Refined Silver, 8.5Jx20, 타이어 255/45R20 105H XL(Vredestein Wintrac Pro). 네덜란드 카탈로그 프로모가 기준입니다.",
+      "category": "wheels",
+      "fitmentNotes": "BMW iX3 (NA5). 사계절 전륜·후륜 동일. 장착비 별도. 한국 판매·인증과 다를 수 있습니다.",
+      "disclaimer": "네덜란드 딜러 카탈로그 가격. 한국 미판매일 수 있으며 관세·공임 미포함.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "NL",
+          "sourceUrl": "https://www.bmw.nl/",
+          "price": 2836,
+          "listPrice": 3336,
+          "currency": "EUR",
+          "asOf": "2025-11-01",
+          "promoUntil": "2026-02-26",
+          "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
+        }
+      ]
+    },
+    {
+      "id": "winter-wheel-20-mp-1048m",
+      "oemPartNumber": "5B778F7",
+      "titleKo": "20인치 윈터휠 세트 M Performance Double Spoke 1048M",
+      "titleOriginal": "20 inch M Performance Double Spoke 1048M winterwielset",
+      "titleOriginalLang": "nl",
+      "summaryKo": "NA5용 20인치 M Performance 윈터 세트. Jet Black matt, 8.5Jx20, 255/45R20 105H XL(Goodyear Ultra Grip Performance 3).",
+      "category": "wheels",
+      "fitmentNotes": "BMW iX3 (NA5). 장착비 별도.",
+      "disclaimer": "네덜란드 딜러 카탈로그 가격. 한국 미판매일 수 있습니다.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "NL",
+          "sourceUrl": "https://www.bmw.nl/",
+          "price": 3604,
+          "listPrice": 4240,
+          "currency": "EUR",
+          "asOf": "2025-11-01",
+          "promoUntil": "2026-02-26",
+          "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
+        }
+      ]
+    },
+    {
+      "id": "winter-wheel-20-aero-1047m",
+      "oemPartNumber": "5B778F9",
+      "titleKo": "20인치 윈터휠 세트 M Aerodynamic 1047M",
+      "titleOriginal": "20 inch M Aerodynamic wheel 1047M winterwielset",
+      "titleOriginalLang": "nl",
+      "summaryKo": "NA5용 20인치 M Aerodynamic 윈터 세트. Jet Black Uni Bright Turned, 8.5Jx20, 255/45R20 105H XL(Goodyear Ultra Grip Performance 3).",
+      "category": "wheels",
+      "fitmentNotes": "BMW iX3 (NA5). 장착비 별도.",
+      "disclaimer": "네덜란드 딜러 카탈로그 가격. 한국 미판매일 수 있습니다.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "NL",
+          "sourceUrl": "https://www.bmw.nl/",
+          "price": 3808,
+          "listPrice": 4480,
+          "currency": "EUR",
+          "asOf": "2025-11-01",
+          "promoUntil": "2026-02-26",
+          "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
+        }
+      ]
+    },
+    {
+      "id": "winter-wheel-21-star-1050m",
+      "oemPartNumber": "5B77902",
+      "titleKo": "21인치 윈터휠 세트 M Star Spoke 1050M",
+      "titleOriginal": "21 inch M Star Spoke 1050M winterwielset",
+      "titleOriginalLang": "nl",
+      "summaryKo": "NA5용 21인치 윈터 세트. Jet Black Uni Bright Turned, 9Jx21, 255/40R21 102H XL(Hankook iON i*cept SUV).",
+      "category": "wheels",
+      "fitmentNotes": "BMW iX3 (NA5). 장착비 별도.",
+      "disclaimer": "네덜란드 딜러 카탈로그 가격. 한국 미판매일 수 있습니다.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "NL",
+          "sourceUrl": "https://www.bmw.nl/",
+          "price": 4148,
+          "listPrice": 4880,
+          "currency": "EUR",
+          "asOf": "2025-11-01",
+          "promoUntil": "2026-02-26",
+          "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
+        }
+      ]
+    },
+    {
+      "id": "winter-wheel-21-aero-1051m",
+      "oemPartNumber": "5B77903",
+      "titleKo": "21인치 윈터휠 세트 M Aerodynamic 1051M",
+      "titleOriginal": "21 inch M Aerodynamic wheel 1051M winterwielset",
+      "titleOriginalLang": "nl",
+      "summaryKo": "NA5용 21인치 M Aerodynamic 윈터 세트. Jet Black Uni Bright Turned, 9Jx21, 255/40R21 102H XL(Goodyear Ultra Grip Performance 3). 국내 M 스포츠 기본 휠 디자인 계열과 가까운 1051 라인입니다.",
+      "category": "wheels",
+      "fitmentNotes": "BMW iX3 (NA5). 장착비 별도. 국내 21인치 1051 바이컬러 여름휠과 세트가 다릅니다.",
+      "disclaimer": "네덜란드 딜러 카탈로그 가격. 한국 미판매일 수 있습니다.",
+      "na5Dedicated": true,
+      "confidence": "confirmed",
+      "markets": [
+        {
+          "country": "NL",
+          "sourceUrl": "https://www.bmw.nl/",
+          "price": 4148,
+          "listPrice": 4880,
+          "currency": "EUR",
+          "asOf": "2025-11-01",
+          "promoUntil": "2026-02-26",
+          "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
+        }
+      ]
+    }
+  ]
+}

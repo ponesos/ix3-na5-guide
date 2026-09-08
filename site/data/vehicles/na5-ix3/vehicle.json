@@ -1,0 +1,161 @@
+{
+  "id": "na5-ix3",
+  "codeName": "NA5",
+  "displayNameKo": "더 뉴 BMW iX3",
+  "displayNameEn": "The new BMW iX3",
+  "platform": "Neue Klasse",
+  "bodyType": "SAV",
+  "notesKo": "구형 iX3(G08)와 차체·부품이 다릅니다. 국내 제원은 출시·사양 자료 기준이며, 문서마다 배터리·중량 수치가 다를 수 있어 국내 상품자료(공차 2,360kg, 배터리 113.4kWh gross, 항속 588~611km)를 우선합니다. 초안 사양표의 WLTP·다른 중량은 참고만 합니다.",
+  "markets": {
+    "kr": {
+      "onSale": true,
+      "powertrain": "50 xDrive",
+      "drive": "사륜(듀얼 모터)",
+      "seats": 5,
+      "priceDisclaimerKo": "기본 표시가는 부가세 포함·개별소비세 3.5% 적용 보도·사양표 기준입니다. 개소세 5% 기준 권장가는 다를 수 있습니다. 옵션·할인·보조금에 따라 달라집니다.",
+      "dimensionsMm": {
+        "length": 4780,
+        "width": 1895,
+        "height": 1635,
+        "wheelbase": 2895
+      },
+      "weightKg": {
+        "curb": 2360,
+        "gross": 2685
+      },
+      "battery": {
+        "grossKwh": 113.4,
+        "chemistryNoteKo": "6세대 eDrive, 원통형 배터리 셀(상품자료)",
+        "efficiencyKmPerKwhMin": 4.8,
+        "efficiencyKmPerKwhMax": 4.9
+      },
+      "cargo": {
+        "trunkLMin": 520,
+        "trunkLMax": 1750,
+        "frunkL": 58
+      },
+      "trims": [
+        {
+          "id": "se",
+          "nameKo": "50 xDrive SE",
+          "priceKrw": 79900000,
+          "priceTaxBasisKo": "개소세 3.5%",
+          "wheelKo": "20인치 M 에어로다이내믹 1046 바이컬러",
+          "highlightsKo": [
+            "어댑티브 LED, 아이코닉 글로우",
+            "파노라믹 iDrive · OS X",
+            "드라이빙 어시스턴트 프로페셔널",
+            "파킹 어시스턴트 플러스",
+            "디지털 키 플러스, 양방향 충전",
+            "파노라믹 썬루프 없음(SE)"
+          ],
+          "exteriorColors": [
+            { "code": "300", "nameKo": "알파인 화이트 메탈릭" },
+            { "code": "475", "nameKo": "블랙 사파이어 메탈릭" },
+            { "code": "C7U", "nameKo": "오션 웨이브 블루 메탈릭" }
+          ],
+          "interiorColors": [
+            { "code": "SFI6", "nameKo": "컨템포러리 | 블랙 바이컬러" },
+            { "code": "SFI7", "nameKo": "컨템포러리 | 디지털 화이트 바이컬러" },
+            { "code": "SFI8", "nameKo": "컨템포러리 | 카스타이나 바이컬러" }
+          ]
+        },
+        {
+          "id": "m-sport",
+          "nameKo": "50 xDrive M 스포츠",
+          "priceKrw": null,
+          "priceKrwMin": 86900000,
+          "priceKrwMax": 87100000,
+          "priceTaxBasisKo": "개소세 3.5%",
+          "wheelKo": "21인치 M 에어로다이내믹 1051 바이컬러",
+          "highlightsKo": [
+            "M 스포츠 패키지, M 스포츠 브레이크(블루)",
+            "파노라믹 썬루프(클라이밋 컴포트 글래이징)",
+            "3D 헤드업 디스플레이",
+            "하만 카돈 하이파이",
+            "전좌석 열선, 1열 마사지",
+            "디지털 화이트+인디비주얼 스티어링 휠 시 87,100,000원대"
+          ],
+          "exteriorColors": [
+            { "code": "300", "nameKo": "알파인 화이트 메탈릭" },
+            { "code": "475", "nameKo": "블랙 사파이어 메탈릭" },
+            { "code": "C7U", "nameKo": "오션 웨이브 블루 메탈릭" },
+            { "code": "C4P", "nameKo": "M 브루클린 그레이 메탈릭" }
+          ],
+          "interiorColors": [
+            { "code": "SFI6", "nameKo": "컨템포러리 | 블랙 바이컬러" },
+            { "code": "SFI7", "nameKo": "컨템포러리 | 디지털 화이트 바이컬러" },
+            { "code": "SFI8", "nameKo": "컨템포러리 | 카스타이나 바이컬러" }
+          ],
+          "notesKo": "사양표 기준 86,900,000원(기본) / 87,100,000원(디지털 화이트+인디비주얼 스티어링). 개소세 5% 권장가는 교육자료상 더 높음."
+        },
+        {
+          "id": "m-sport-pro",
+          "nameKo": "50 xDrive M 스포츠 프로",
+          "priceKrw": 91900000,
+          "priceTaxBasisKo": "개소세 3.5%",
+          "wheelKo": "22인치 에어로다이내믹 1053 바이컬러",
+          "highlightsKo": [
+            "M 스포츠 프로: 3D 키드니 쉐도우라인, 블랙 하이글로스 미러캡·디퓨저",
+            "M 스포츠 브레이크(레드), M 스티어링 휠, M 시트벨트",
+            "BMW 인디비주얼 레더(메리노) 블랙 바이컬러",
+            "파킹 어시스턴트 프로페셔널(리모트 파킹 등)"
+          ],
+          "exteriorColors": [
+            { "code": "300", "nameKo": "알파인 화이트 메탈릭" },
+            { "code": "475", "nameKo": "블랙 사파이어 메탈릭" },
+            { "code": "C7U", "nameKo": "오션 웨이브 블루 메탈릭" },
+            { "code": "C7T", "nameKo": "폴라라이즈드 그레이 메탈릭" }
+          ],
+          "interiorColors": [
+            { "code": "SKI6", "nameKo": "BMW 인디비주얼 레더 | 블랙 바이컬러" }
+          ]
+        }
+      ],
+      "performance": {
+        "systemKw": 345,
+        "systemHp": 469,
+        "torqueNm": 645,
+        "torqueKgm": 65.8,
+        "accel0to100Sec": 4.9,
+        "topSpeedKmh": 210,
+        "dragCd": 0.24
+      },
+      "range": {
+        "koreaCertifiedKmMin": 588,
+        "koreaCertifiedKm": 611,
+        "wltpKm": 805
+      },
+      "charging": {
+        "architectureV": 800,
+        "acKw": 11,
+        "dcKwMin": 350,
+        "dcKwMax": 400,
+        "dc10to80Minutes": 22,
+        "ac0to100Hours": 11.25,
+        "bidirectional": true,
+        "notesKo": "10분 초급속 시 국내 인증 기준 약 250km(보도·상품자료). DC 10→80% 약 22분, AC 0→100% 약 11시간 15분. V2L 등은 별도 액세서리일 수 있습니다. 충전기·배터리 상태에 따라 달라집니다."
+      }
+    }
+  },
+  "sources": [
+    {
+      "title": "BMW 코리아, 차세대 프리미엄 순수전기 SAV ‘더 뉴 BMW iX3’ 국내 공식 출시",
+      "url": "https://www.press.bmwgroup.com/korea/article/detail/T0458645KO/bmw-%EC%BD%94%EB%A6%AC%EC%95%84-%EC%B0%A8%EC%84%B8%EB%8C%80-%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84-%EC%88%9C%EC%88%98%EC%A0%84%EA%B8%B0-sav-%EB%8D%94-%EB%89%B4-bmw-ix3%E2%80%99-%EA%B5%AD%EB%82%B4-%EA%B3%B5%EC%8B%9D-%EC%B6%9C%EC%8B%9C?language=ko",
+      "asOf": "2026-06-18",
+      "kind": "press"
+    },
+    {
+      "title": "THE NEW BMW iX3 상품 정보 (딜러 내부 교육용)",
+      "asOf": "2026-07-06",
+      "kind": "local-pdf",
+      "noteKo": "원본 PDF는 사이트에 올리지 않음. 제원·트림 요약만 반영."
+    },
+    {
+      "title": "THE NEW iX3 사양표 (사용자 제공)",
+      "asOf": "2026-09-08",
+      "kind": "local-pdf",
+      "noteKo": "트림 가격·옵션 요약. 일부 페이지는 WLTP/초안(TBD) 표기."
+    }
+  ]
+}

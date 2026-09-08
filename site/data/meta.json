@@ -1,0 +1,16 @@
+{
+  "siteName": "iX3 NA5 가이드",
+  "tagline": "더 뉴 BMW iX3(NA5) 비공식 한국어 가이드",
+  "updatedAt": "2026-09-08",
+  "unofficial": true,
+  "vehicleId": "na5-ix3",
+  "fx": {
+    "eurKrw": 1563.3,
+    "gbpKrw": 1813.3,
+    "asOf": "2026-09-08",
+    "eurKrwAsOf": "2026-09-04",
+    "gbpKrwAsOf": "2026-09-08",
+    "source": "EUR/KRW ValutaFX 종가(2026-09-04), GBP/KRW 시장 스냅샷(2026-09-08). 추정 환산용이며 송금·카드 환율이 아닙니다.",
+    "sourceUrl": "https://www.valutafx.com/history/eur-krw-2026-09-04"
+  }
+}

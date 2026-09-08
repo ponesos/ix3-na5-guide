@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ix3-na5/schemas/tips.schema.json",
+  "title": "Owner tips and FAQ",
+  "type": "object",
+  "required": ["vehicleId", "status", "updatedAt", "items"],
+  "properties": {
+    "vehicleId": { "type": "string" },
+    "status": { "type": "string", "enum": ["placeholder", "ready"] },
+    "updatedAt": { "type": "string" },
+    "sourceNoteKo": { "type": "string" },
+    "highlights": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "category", "titleKo", "questionKo", "answerKo", "confidence"],
+        "properties": {
+          "id": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "purchase",
+              "delivery",
+              "trim",
+              "charging",
+              "software",
+              "accessory",
+              "finance",
+              "ownership"
+            ]
+          },
+          "titleKo": { "type": "string" },
+          "questionKo": { "type": "string" },
+          "answerKo": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["community", "confirmed", "unverified"]
+          },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "asOf": { "type": "string" },
+          "caveatKo": { "type": "string" }
+        }
+      }
+    }
+  }
+}

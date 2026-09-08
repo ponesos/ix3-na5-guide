@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ix3-na5/schemas/accessories.schema.json",
+  "title": "Accessories catalog",
+  "type": "object",
+  "required": ["vehicleId", "updatedAt", "items"],
+  "properties": {
+    "vehicleId": { "type": "string" },
+    "updatedAt": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "oemPartNumber",
+          "titleKo",
+          "titleOriginal",
+          "titleOriginalLang",
+          "summaryKo",
+          "category",
+          "markets",
+          "na5Dedicated"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "oemPartNumber": { "type": "string" },
+          "titleKo": { "type": "string" },
+          "titleOriginal": { "type": "string" },
+          "titleOriginalLang": { "type": "string", "enum": ["de", "en", "nl"] },
+          "summaryKo": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": ["interior", "cargo", "charging", "wheels", "exterior", "other"]
+          },
+          "fitmentNotes": { "type": "string" },
+          "disclaimer": { "type": "string" },
+          "na5Dedicated": { "type": "boolean" },
+          "confidence": {
+            "type": "string",
+            "enum": ["confirmed", "inferred", "unverified"]
+          },
+          "image": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["src", "altKo", "credit"],
+            "properties": {
+              "src": {
+                "type": "string",
+                "description": "site/ 기준 상대 경로. 예: images/accessories/panorama-roof-shade.jpg"
+              },
+              "altKo": { "type": "string" },
+              "credit": {
+                "type": "string",
+                "enum": ["owner", "contributor", "licensed", "placeholder"]
+              },
+              "creditKo": { "type": "string" }
+            }
+          },
+          "markets": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["country", "sourceUrl", "price", "currency", "asOf"],
+              "properties": {
+                "country": { "type": "string", "enum": ["DE", "UK", "NL"] },
+                "sourceUrl": { "type": "string" },
+                "price": { "type": "number" },
+                "listPrice": { "type": "number" },
+                "currency": { "type": "string", "enum": ["EUR", "GBP"] },
+                "asOf": { "type": "string" },
+                "promoUntil": { "type": "string" },
+                "shopProductId": { "type": "string" },
+                "priceNoteKo": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

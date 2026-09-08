@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="BMW iX3 NA5 유럽 공식 액세서리 한국어 정리. 부품번호, 현지 가격, 추정 원화." />
+    <title>iX3 NA5 가이드 · 액세서리</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <a class="skip" href="#content">본문으로</a>
+    <div class="banner">BMW·BMW 코리아와 무관한 비공식 사이트입니다. 아래 가격은 해당일 유럽 공식몰 표시가이며 한국 판매가가 아닙니다.</div>
+    <header class="site-header">
+      <a class="brand" href="index.html">iX3 NA5 가이드 <span class="tag">비공식</span></a>
+      <p class="meta-date" data-updated></p>
+    </header>
+    <nav aria-label="주요">
+      <ul>
+        <li><a href="index.html">개요</a></li>
+        <li><a href="accessories.html" aria-current="page">액세서리</a></li>
+        <li><a href="tips.html">오너 FAQ</a></li>
+        <li><a href="compare.html">비교</a></li>
+        <li><a href="reviews.html">시승기</a></li>
+      </ul>
+    </nav>
+    <main id="content">
+      <h1>유럽 공식 액세서리</h1>
+      <p class="lede">독일(우선)·네덜란드·영국 BMW 공식/딜러 카탈로그 항목을 한국어로 옮깁니다. 구형 iX3(G08) 부품은 넣지 않습니다. <span data-count></span></p>
+      <div class="filters">
+        <div class="filter-row" data-filter-category></div>
+        <div class="filter-row" data-filter-market></div>
+      </div>
+      <div class="cards" data-cards></div>
+      <section class="panel" style="margin-top: 1.25rem">
+        <h2>사기 전에</h2>
+        <ul class="muted">
+          <li>한국 미도입이거나 딜러 주문만 가능할 수 있습니다. 공임·관세·부가세는 포함하지 않았습니다.</li>
+          <li>장착은 VIN과 옵션 코드(예: 파노라마 SA 408)로 확인합니다.</li>
+          <li>추정 원화는 송금·카드 결제 금액이 아닙니다.</li>
+          <li>카드 사진은 오너·제보 촬영본을 <code>site/images/accessories/</code>에 넣고 JSON에 연결합니다. BMW 공식몰 사진 무단 업로드는 하지 않습니다.</li>
+        </ul>
+        <p class="muted" data-fx></p>
+      </section>
+    </main>
+    <footer>원문은 각 카드의 공식 페이지 링크를 따릅니다. 사진은 올리지 않습니다.</footer>
+    <script type="module" src="js/render-accessories.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+
+# Local secrets — never commit VIN or credentials
+.local/
+*.local.json
+*.local.env
+secrets/
+!secrets/README.md
+!secrets/*.example.json
+
+# Dealer-internal / personal PDFs (never publish)
+.source-pdfs/*
+!.source-pdfs/README.md
