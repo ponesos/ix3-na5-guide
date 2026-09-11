@@ -1,0 +1,242 @@
+{
+  "vehicleId": "na5-ix3",
+  "status": "ready",
+  "updatedAt": "2026-09-11",
+  "sourceNoteKo": "2026년 8월 이후 THE NEW iX3·노이어 클라쎄 소식을 골라 모았어요. 짧은 요약만 두고, 자세한 내용은 원문을 봐 주세요.",
+  "items": [
+    {
+      "id": "asiatoday-charge-2026-09-06",
+      "titleKo": "[시승기] 전기차 약점을 지운 급속충전… 10분만 꽂아도 250㎞ 충분",
+      "outletKo": "아시아투데이",
+      "publishedAt": "2026-09-06",
+      "url": "https://www.asiatoday.co.kr/kn/view.php?key=20260907010002183",
+      "summaryKo": "노이어 클라쎄 신형 iX3의 배터리·충전·구동을 시승으로 풀어낸 글이에요. 짧게 급속충전해도 실사용 거리가 잘 살아난다는 점이 포인트예요.",
+      "tags": [
+        "시승",
+        "충전"
+      ]
+    },
+    {
+      "id": "newstomato-drive-2026-09-04",
+      "titleKo": "내연기관에 가까운 전기차 BMW ‘더 뉴 iX3’",
+      "outletKo": "뉴스토마토",
+      "publishedAt": "2026-09-04",
+      "url": "http://www.newstomato.com/ReadNews.aspx?no=1312567&inflow=N",
+      "summaryKo": "국내 50 xDrive 시승기예요. 노이어 클라쎄 첫 양산 모델답게 주행 질감이 내연기관에 가깝다는 인상을 전해요.",
+      "tags": [
+        "시승",
+        "50 xDrive"
+      ]
+    },
+    {
+      "id": "kmib-driver-2026-09-04",
+      "titleKo": "전기차가 대세라길래, BMW iX3 타봤습니다 [운전석리포트]",
+      "outletKo": "국민일보",
+      "publishedAt": "2026-09-04",
+      "url": "https://www.kmib.co.kr/article/view.asp?arcid=9000009032&cp=nv",
+      "summaryKo": "기자협회 8월의 차로 뽑힌 iX3 50 xDrive M 스포츠를, 일상에서 타 본 느낌으로 소개해요.",
+      "tags": [
+        "시승",
+        "이달의 차"
+      ]
+    },
+    {
+      "id": "newsis-ev-sales-2026-09-07",
+      "titleKo": "BMW코리아, 올해 전기차 5895대 판매 전년비 55%↑…신형 iX3 견인",
+      "outletKo": "뉴시스",
+      "publishedAt": "2026-09-07",
+      "url": "https://www.newsis.com/view/NISX20260907_0003778637",
+      "summaryKo": "올해 1~8월 수입 프리미엄 전기차 판매 1위 소식이에요. 신형 iX3 50 xDrive가 8월에 185대 출고되며 힘을 보탰다고 해요.",
+      "tags": [
+        "판매",
+        "국내"
+      ]
+    },
+    {
+      "id": "digitaltoday-china-2026-08-28",
+      "titleKo": "\"사진만 보고 샀다\"…BMW 신형 iX3, 中서 수만건 예약 폭주",
+      "outletKo": "디지털투데이",
+      "publishedAt": "2026-08-28",
+      "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=696356",
+      "summaryKo": "중국에서 신형 iX3 사전·예약 수요가 세게 붙었다는 보도예요. 글로벌 주문 흐름과도 함께 언급돼요.",
+      "tags": [
+        "중국",
+        "수요"
+      ]
+    },
+    {
+      "id": "digitaltoday-china-lwb-2026-08-25",
+      "titleKo": "BMW, 중국서 장축형 iX3 사전판매…현지 전기차 반격 나서",
+      "outletKo": "디지털투데이",
+      "publishedAt": "2026-08-25",
+      "url": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=695295",
+      "summaryKo": "중국향 롱휠베이스 iX3 사전판매 소식이에요. 현지 프리미엄 전기 SUV 경쟁을 겨냥한 라인업으로 읽혀요.",
+      "tags": [
+        "중국",
+        "LWB"
+      ]
+    },
+    {
+      "id": "hankyung-sales-2026-08-25",
+      "titleKo": "BMW, 올들어 4만5683대 판매…신형 iX3 출고 첫 달 247대",
+      "outletKo": "한국경제",
+      "publishedAt": "2026-08-25",
+      "url": "https://www.hankyung.com/article/2026082505531",
+      "summaryKo": "7월 누적 판매와 함께, 더 뉴 iX3가 출고 첫 달 247대를 찍으며 전기 SUV 빈자리를 메웠다는 이야기예요.",
+      "tags": [
+        "판매",
+        "국내"
+      ]
+    },
+    {
+      "id": "consumernews-drive-2026-08-19",
+      "titleKo": "[시승기] BMW iX3, 전기차 맞아? 제원 이상의 강력한 주행 성능",
+      "outletKo": "소비자가 만드는 신문",
+      "publishedAt": "2026-08-19",
+      "url": "http://www.consumernews.co.kr/news/articleView.html?idxno=761676",
+      "summaryKo": "구형과 달리 차체부터 새로 짠 신형 iX3 시승기예요. 주행 성능과 노이어 클라쎄 변화를 중심으로 봐요.",
+      "tags": [
+        "시승"
+      ]
+    },
+    {
+      "id": "ekn-lineup-2026-08-18",
+      "titleKo": "전기차도 취향 따라…BMW 뉴 iX3 611km·800V 충전 강조",
+      "outletKo": "에너지경제",
+      "publishedAt": "2026-08-18",
+      "url": "https://www.ekn.kr/web/view.php?key=20260818023233606",
+      "summaryKo": "국내 전기차 라인업을 훑는 기사예요. 뉴 iX3는 인증 최대 611km, 큰 배터리, 800V 충전을 핵심으로 소개해요.",
+      "tags": [
+        "제원",
+        "항속"
+      ]
+    },
+    {
+      "id": "ziksir-import-2026-08-17",
+      "titleKo": "[성유창 CAR썰] 수입차 패권경쟁…iX3 노이어 클라쎄 첫 양산차",
+      "outletKo": "직설",
+      "publishedAt": "2026-08-17",
+      "url": "https://www.ziksir.com/news/articleView.html?idxno=143240",
+      "summaryKo": "하반기 수입차 경쟁 속에서 iX3를 짚어 봐요. 항속·400kW급 급속충전·하트 오브 조이 같은 포인트를 짧게 정리해요.",
+      "tags": [
+        "시장",
+        "제원"
+      ]
+    },
+    {
+      "id": "womanchosun-lineup-2026-08-15",
+      "titleKo": "2026 전기차 라인업…BMW iX3 노이어 클라쎄",
+      "outletKo": "여성조선",
+      "publishedAt": "2026-08-15",
+      "url": "http://woman.chosun.com/news/articleView.html?idxno=126407",
+      "summaryKo": "올해 전기차 선택지를 소개하는 글이에요. iX3를 노이어 클라쎄 첫 모델로 두고 충전·수상 이력을 가볍게 알려 줘요.",
+      "tags": [
+        "제원"
+      ]
+    },
+    {
+      "id": "kmec-carspot-2026-08-13",
+      "titleKo": "[Car spot] 60년만의 부활 '노이어클라쎄' 'BMW iX3'",
+      "outletKo": "기계설비신문",
+      "publishedAt": "2026-08-13",
+      "url": "https://www.kmecnews.co.kr/news/articleView.html?idxno=51259",
+      "summaryKo": "노이어 클라쎄라는 이름에 담긴 역사와, 앞으로 BMW 전기차의 기준이 될 첫 모델 iX3를 설명해 줘요.",
+      "tags": [
+        "노이어 클라쎄"
+      ]
+    },
+    {
+      "id": "chosunbiz-ev-share-2026-08-11",
+      "titleKo": "전기차가 이끄는 수입차 시장…BMW, 6월 더 뉴 iX3 출시·7월 인도",
+      "outletKo": "조선비즈",
+      "publishedAt": "2026-08-11",
+      "url": "https://biz.chosun.com/industry/car/2026/08/11/LTPYSO5Z35A5ZI36CNM2G6YZA4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+      "summaryKo": "수입 전기차 비중이 커지는 가운데, BMW가 더 뉴 iX3를 6월 출시·7월 인도로 하반기를 열었다는 소식이에요.",
+      "tags": [
+        "출시",
+        "시장"
+      ]
+    },
+    {
+      "id": "chosunbiz-july-1st-2026-08-10",
+      "titleKo": "다양한 취향에 답한 결과…BMW코리아, 7월 프리미엄 수입차 1위",
+      "outletKo": "조선비즈",
+      "publishedAt": "2026-08-10",
+      "url": "https://biz.chosun.com/industry/car/2026/08/10/PNUBDWKDSVG2PC5IWJMGVXOKMM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+      "summaryKo": "7월 판매 1위 배경으로 더 뉴 iX3 인도가 본격화된 점을 꼽아요. 중형 순수전기 SUV 공백을 메운 효과로 읽혀요.",
+      "tags": [
+        "판매",
+        "인도"
+      ]
+    },
+    {
+      "id": "hankyung-car-of-month-2026-08-06",
+      "titleKo": "\"한번 충전에 611km\"…한국자동차기자협회, BMW iX3 8월의 차 선정",
+      "outletKo": "한국경제",
+      "publishedAt": "2026-08-06",
+      "url": "https://www.hankyung.com/article/202608067823g",
+      "summaryKo": "기자협회 8월의 차 선정 소식이에요. 노이어 클라쎄 첫 결실로 주행·충전 효율을 높게 봤다고 전해요.",
+      "tags": [
+        "이달의 차",
+        "항속"
+      ]
+    },
+    {
+      "id": "zdnet-car-of-month-2026-08-06",
+      "titleKo": "BMW 더 뉴 iX3, 자동차기자협회 8월의 차 선정",
+      "outletKo": "지디넷코리아",
+      "publishedAt": "2026-08-06",
+      "url": "https://zdnet.co.kr/view/?no=20260806101101",
+      "summaryKo": "같은 선정을 다른 매체가 짧게 다룬 글이에요. 출시 직후 기자단이 어떤 반응을 보였는지 참고하기 좋아요.",
+      "tags": [
+        "이달의 차"
+      ]
+    },
+    {
+      "id": "etnews-launch-wave-2026-08-02",
+      "titleKo": "수입차, 핵심 신차 릴레이…BMW 뉴 iX3 7월 고객 인도 시작",
+      "outletKo": "전자신문",
+      "publishedAt": "2026-08-02",
+      "url": "https://www.etnews.com/20260731000194",
+      "summaryKo": "하반기 수입 신차 공세 속에서 BMW가 뉴 iX3 인도를 시작했다는 시장 브리핑이에요.",
+      "tags": [
+        "인도",
+        "시장"
+      ]
+    },
+    {
+      "id": "autodaily-orders-2026-08-31",
+      "titleKo": "BMW 전기차 누적 200만대 돌파⋯iX3 누적 계약 10만대 눈앞",
+      "outletKo": "오토데일리",
+      "publishedAt": "2026-08-31",
+      "url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546969",
+      "summaryKo": "글로벌 전기차 누적 200만대 소식과 함께, iX3 신규 주문이 10만대에 가깝다는 숫자를 전해요.",
+      "tags": [
+        "글로벌",
+        "수요"
+      ]
+    },
+    {
+      "id": "newsis-evtrend-2026-08-25",
+      "titleKo": "전기차 춘추전국시대…BMW iX3는 노이어 클라쎄 첫 전기차",
+      "outletKo": "뉴시스",
+      "publishedAt": "2026-08-25",
+      "url": "https://www.newsis.com/view/NISX20260825_0003762023",
+      "summaryKo": "EV트렌드코리아 현장 스케치예요. iX3를 노이어 클라쎄 첫 전기차로 소개하며 BMW 전동화의 얼굴로 봐요.",
+      "tags": [
+        "전시"
+      ]
+    },
+    {
+      "id": "autodaily-frieze-2026-09-04",
+      "titleKo": "BMW코리아, '프리즈 뮤직 2026' 개최⋯신형 iX3도 현장 전시",
+      "outletKo": "오토데일리",
+      "publishedAt": "2026-09-04",
+      "url": "https://www.autodaily.co.kr/news/articleView.html?idxno=600186",
+      "summaryKo": "프리즈 뮤직 행사에 신형 iX3를 전시한 소식이에요. 시승기보다 브랜드·문화 마케팅 쪽에 가깝습니다.",
+      "tags": [
+        "마케팅"
+      ]
+    }
+  ]
+}

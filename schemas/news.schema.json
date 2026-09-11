@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ix3-na5/schemas/news.schema.json",
+  "title": "News",
+  "type": "object",
+  "required": ["vehicleId", "status", "updatedAt", "items"],
+  "properties": {
+    "vehicleId": { "type": "string" },
+    "status": { "type": "string", "enum": ["placeholder", "ready"] },
+    "updatedAt": { "type": "string" },
+    "sourceNoteKo": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "titleKo", "outletKo", "publishedAt", "url", "summaryKo"],
+        "properties": {
+          "id": { "type": "string" },
+          "titleKo": { "type": "string" },
+          "outletKo": { "type": "string" },
+          "publishedAt": { "type": "string", "description": "YYYY-MM-DD" },
+          "url": { "type": "string", "description": "원문 URL (originallink 우선)" },
+          "summaryKo": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

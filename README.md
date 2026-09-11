@@ -1,6 +1,6 @@
-# iX3 NA5 가이드 (비공식)
+# 글로벌 EV 노트 (비공식)
 
-더 뉴 BMW iX3(코드명 NA5)를 검토하거나 막 인도받은 사람을 위한 **비공식** 한국어 정보 사이트입니다. BMW 공식 채널이 아닙니다.
+수입 전기차 제원·트림·가격·액세서리를 모아 둔 **비공식** 한국어 안내 사이트입니다. BMW 등 공식 채널이 아니며, **국내 브랜드 전기차는 다루지 않습니다.** 첫 차종은 더 뉴 BMW iX3(NA5)입니다.
 
 지금 단계: **정적 HTML + JSON**, 공유는 **GitHub Pages URL**. 자체 웹 서버는 트래픽·실시간 갱신 수요가 생길 때까지 두지 않습니다. 이유는 [docs/ROADMAP.md](docs/ROADMAP.md)를 봅니다.
 
@@ -8,7 +8,7 @@
 
 기능을 넣을 때 순서:
 
-1. `docs/` (특히 REQUIREMENTS, DATA, UI)
+1. `docs/` — 특히 [VEHICLE_ONBOARDING.md](docs/VEHICLE_ONBOARDING.md), REQUIREMENTS, DATA, TERMINOLOGY, UI
 2. `schemas/` (필드가 바뀌면)
 3. `data/` 수정 → `./scripts/sync-data.sh`
 4. `site/` UI
@@ -18,10 +18,12 @@
 |------|------|
 | [docs/PRODUCT.md](docs/PRODUCT.md) | 비전, 페르소나, 비목표 |
 | [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md) | 기능·수용 기준 |
+| [docs/VEHICLE_ONBOARDING.md](docs/VEHICLE_ONBOARDING.md) | **새 차종 수집·매핑 체크리스트** |
 | [docs/ROADMAP.md](docs/ROADMAP.md) | Phase 0–4, 서버 이관 트리거 |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | 폴더, 정적→API |
-| [docs/DATA.md](docs/DATA.md) | JSON 규칙 |
-| [docs/UI.md](docs/UI.md) | 정보 구조 |
+| [docs/DATA.md](docs/DATA.md) | JSON 규칙·필드 매핑 |
+| [docs/TERMINOLOGY.md](docs/TERMINOLOGY.md) | 공식 용어·카피 규칙 |
+| [docs/UI.md](docs/UI.md) | 정보 구조·시각 방향 |
 | [docs/LEGAL.md](docs/LEGAL.md) | 상표, 요약, 스크래핑 금지 |
 
 ## 로컬에서 보기
@@ -35,7 +37,7 @@
 npx --yes serve site
 ```
 
-터미널에 나온 주소(보통 `http://localhost:3000`)를 브라우저에서 엽니다.
+터미널에 나온 주소(보통 `http://localhost:3000`)를 브라우저에서 엽니다. 처음 열면 **기본 차종(iX3) 모델 정보**가 바로 보입니다. 차종 목록은 내비 **차종**(`vehicles.html`)에서 볼 수 있습니다.
 
 `npx serve`가 환경에서 실패하면 `site/`에서 다음을 씁니다.
 
@@ -77,6 +79,24 @@ VS Code/Cursor Live Server를 쓸 때는 **문서 루트를 `site` 폴더**로 �
 ```
 
 환율 스냅샷은 `data/meta.json`의 `fx`입니다. 추정 원화는 구매가가 아닙니다.
+
+## 해외 포럼(MOTOR-TALK) 메타 갱신
+
+1차 소스는 [MOTOR-TALK iX3 Neue Klasse NA5](https://www.motor-talk.de/forum/bmw-ix3-neue-klasse-na5-b1240.html)입니다. 본문·닉네임은 저장하지 않고 제목·날짜·댓글·짧은 한글 요약만 `forum.json`에 넣습니다.
+
+1. 위 보드를 브라우저에서 연다  
+2. 페이지 저장(HTML만)  
+3. 실행:
+
+```bash
+python3 scripts/sync-motor-talk.py --html /path/to/saved-forum.html
+# 번역 API 없이(기존 한글 유지):  --no-translate
+./scripts/sync-data.sh
+```
+
+샘플 덤프: `scripts/fixtures/motor-talk-na5-sample.html`
+
+(참고) Bimmerpost·네이버 카페 연동은 하지 않습니다. 국내 토론은 이후 사이트 자체 포럼으로 검토합니다(ROADMAP).
 
 ## 액세서리 사진
 

@@ -7,6 +7,7 @@
   "properties": {
     "vehicleId": { "type": "string" },
     "updatedAt": { "type": "string" },
+    "sourceNoteKo": { "type": "string" },
     "items": {
       "type": "array",
       "items": {
@@ -14,7 +15,7 @@
         "additionalProperties": false,
         "required": [
           "id",
-          "oemPartNumber",
+          "origin",
           "titleKo",
           "titleOriginal",
           "titleOriginalLang",
@@ -25,10 +26,23 @@
         ],
         "properties": {
           "id": { "type": "string" },
-          "oemPartNumber": { "type": "string" },
+          "origin": {
+            "type": "string",
+            "enum": ["oem", "thirdParty"],
+            "description": "oem=BMW 정품(오리지널), thirdParty=서드파티"
+          },
+          "oemPartNumber": {
+            "type": "string",
+            "description": "BMW 품번. 정품은 권장, 서드파티는 생략 가능"
+          },
+          "brandKo": { "type": "string", "description": "서드파티 브랜드명" },
+          "sellerSku": { "type": "string", "description": "판매처·쇼핑몰 상품코드" },
           "titleKo": { "type": "string" },
           "titleOriginal": { "type": "string" },
-          "titleOriginalLang": { "type": "string", "enum": ["de", "en", "nl"] },
+          "titleOriginalLang": {
+            "type": "string",
+            "enum": ["de", "en", "nl", "ko"]
+          },
           "summaryKo": { "type": "string" },
           "category": {
             "type": "string",
@@ -46,10 +60,7 @@
             "additionalProperties": false,
             "required": ["src", "altKo", "credit"],
             "properties": {
-              "src": {
-                "type": "string",
-                "description": "site/ 기준 상대 경로. 예: images/accessories/panorama-roof-shade.jpg"
-              },
+              "src": { "type": "string" },
               "altKo": { "type": "string" },
               "credit": {
                 "type": "string",
@@ -65,15 +76,26 @@
               "type": "object",
               "required": ["country", "sourceUrl", "price", "currency", "asOf"],
               "properties": {
-                "country": { "type": "string", "enum": ["DE", "UK", "NL"] },
+                "country": {
+                  "type": "string",
+                  "enum": ["DE", "UK", "NL", "KR", "EB"],
+                  "description": "EB = eBay marketplace listing"
+                },
                 "sourceUrl": { "type": "string" },
                 "price": { "type": "number" },
                 "listPrice": { "type": "number" },
-                "currency": { "type": "string", "enum": ["EUR", "GBP"] },
+                "currency": {
+                  "type": "string",
+                  "enum": ["EUR", "GBP", "KRW"]
+                },
                 "asOf": { "type": "string" },
                 "promoUntil": { "type": "string" },
                 "shopProductId": { "type": "string" },
-                "priceNoteKo": { "type": "string" }
+                "priceNoteKo": { "type": "string" },
+                "channelKo": {
+                  "type": "string",
+                  "description": "예: 네이버쇼핑, BMW 공식몰"
+                }
               }
             }
           }

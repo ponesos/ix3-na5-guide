@@ -1,12 +1,14 @@
 # 아키텍처
 
-최종 수정: 2026-09-08
+최종 수정: 2026-09-11
 
 ## 원칙
 
 **화면이 아니라 데이터가 소스 오브 트루스다.** 나중에 서버를 붙여도 카드 마크업을 다시 짜지 않고 데이터 소스만 바꾼다.
 
 브라우저에서 BMW 공식몰을 긁지 않는다. CORS·약관·파손되기 쉬운 DOM에 의존하지 않는다. 수집은 사람이 공식 페이지를 보고 `data/`에 적거나, 이후 `scripts/`의 **오프라인 보조 도구**로 분리한다.
+
+차종 추가·필드 매핑 규칙은 [VEHICLE_ONBOARDING.md](VEHICLE_ONBOARDING.md)가 기준이다. UI·용어 변경 요청은 문서 반영 후 코드에 적용한다.
 
 ## 흐름
 
@@ -19,11 +21,13 @@ docs (요구) → data JSON → site 정적 페이지 → GitHub Pages
 
 | 경로 | 역할 |
 |------|------|
-| `docs/` | 살아있는 개발 문서 |
-| `data/` | 편집용 원본 JSON |
+| `docs/` | 살아있는 개발 문서 (ONBOARDING·DATA·TERMINOLOGY 필수) |
+| `data/vehicles.json` | 차종 카탈로그(허브) |
+| `data/vehicles/<id>/` | 차종별 JSON 원본 |
 | `schemas/` | JSON Schema |
 | `site/` | Pages 루트. `site/data/`는 원본 복사본 |
 | `scripts/sync-data.sh` | `data/` → `site/data/` |
+| `scripts/sync-motor-talk.py` | MOTOR-TALK 목록 HTML → `forum.json` 메타(+제목 번역) |
 
 GitHub Pages는 **`site/` 폴더만** 공개한다. 따라서 브라우저는 `site/data/...`만 fetch한다. **원본은 항상 `data/`를 고치고 스크립트로 복사**한다.
 
@@ -34,25 +38,28 @@ Phase 0–3: `fetch('data/....json')` (사이트 루트 기준 **상대 경로**
 Phase 4 예시:
 
 - 같은 JSON을 `GET /api/vehicles/na5-ix3/accessories`로 제공
-- `site/js`의 `DATA_BASE`만 `/api`로 변경
+- `site/js`의 데이터 베이스만 `/api`로 변경
 - 환율만 서버에서 넣고 액세서리는 계속 파일일 수도 있음
 
 DB는 트래픽·다중 편집자가 생기기 전에는 불필요하다.
 
 ## 차종 확장
 
-차량 키는 폴더명과 JSON의 `vehicleId`로 통일한다. 예: `na5-ix3`.
+차량 키는 폴더명과 JSON의 `vehicleId`·`vehicles.json`의 `id`로 통일한다. 예: `na5-ix3`.
 
 ```text
+data/vehicles.json
 data/vehicles/<vehicleId>/
   vehicle.json
   accessories.json
   reviews.json
+  news.json
   competitors.json
   tips.json
+  forum.json
 ```
 
-사이트는 이후 `vehicles/<id>/` 라우트 또는 쿼리로 연다. **지금은 iX3만** 하드코드해도 되지만 파일은 이미 이 구조를 쓴다.
+사이트: **`index.html`**(모델 정보, `defaultVehicleId`로 바로 표시) · `vehicles.html`(차종 목록) · 섹션은 `?v=<id>`. `site/js/app.js`의 `getVehicleId` / `vehicleHref` / `bindChrome`가 공통.
 
 ## 프론트
 

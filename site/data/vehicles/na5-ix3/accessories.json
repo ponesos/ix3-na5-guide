@@ -1,6 +1,6 @@
 {
   "vehicleId": "na5-ix3",
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-11",
   "items": [
     {
       "id": "panorama-roof-shade",
@@ -23,7 +23,8 @@
           "asOf": "2026-09-08",
           "shopProductId": "903246"
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "luggage-compartment-molded-mat",
@@ -45,7 +46,8 @@
           "asOf": "2026-09-08",
           "shopProductId": "903243"
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "luggage-compartment-reversible-mat",
@@ -67,7 +69,8 @@
           "asOf": "2026-09-08",
           "shopProductId": "903244"
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "mode3-charge-cable-1ph-5m",
@@ -90,7 +93,8 @@
           "asOf": "2026-09-08",
           "shopProductId": "734064"
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "winter-wheel-20-star-1045",
@@ -115,7 +119,8 @@
           "promoUntil": "2026-02-26",
           "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "winter-wheel-20-mp-1048m",
@@ -140,7 +145,8 @@
           "promoUntil": "2026-02-26",
           "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "winter-wheel-20-aero-1047m",
@@ -165,7 +171,8 @@
           "promoUntil": "2026-02-26",
           "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "winter-wheel-21-star-1050m",
@@ -190,7 +197,8 @@
           "promoUntil": "2026-02-26",
           "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
         }
-      ]
+      ],
+      "origin": "oem"
     },
     {
       "id": "winter-wheel-21-aero-1051m",
@@ -215,7 +223,381 @@
           "promoUntil": "2026-02-26",
           "priceNoteKo": "부가세 포함·장착 제외. 프로모 종료일 2026-02-26."
         }
+      ],
+      "origin": "oem"
+    },
+    {
+      "id": "all-weather-mat-pack-na5mat",
+      "origin": "oem",
+      "oemPartNumber": "NA5MAT",
+      "titleKo": "올웨더 매트 프로텍션 팩",
+      "titleOriginal": "BMW iX3 NA5 All Weather Mat Protection Pack NA5MAT",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5용 BMW 올웨더 매트 패키지. 영국 딜러 eBay 리스팅 기준 신품입니다. 구성(앞·뒤·트렁크)은 판매 페이지에서 확인하세요.",
+      "category": "interior",
+      "fitmentNotes": "BMW iX3 (NA5). 핸들 위치(LHD/RHD)에 따라 품번·구성이 다를 수 있습니다.",
+      "disclaimer": "eBay 표시가·배송비 별도. 국내 딜러 재고·가격과 다를 수 있습니다.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/336741740836",
+          "price": 374036,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 영국(sycamorepeterborough). 배송비 미명시. 스냅샷 표시가."
+        }
+      ]
+    },
+    {
+      "id": "front-all-weather-mats-rhd-51475B44A41",
+      "origin": "oem",
+      "oemPartNumber": "51475B44A41",
+      "titleKo": "앞좌석 올웨더 플로어 매트 (RHD)",
+      "titleOriginal": "BMW iX3 NA5 Front All Weather Floor Mats RHD",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5 우측 핸들용 앞좌석 올웨더 플로어 매트 정품. 품번 51475B44A41.",
+      "category": "interior",
+      "fitmentNotes": "RHD 전용. 국내 LHD 차량에는 맞지 않을 수 있습니다.",
+      "disclaimer": "eBay 표시가. 한국 사양은 LHD이므로 구매 전 핸들 위치를 확인하세요.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/336742232679",
+          "price": 170597,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 영국. 배송비 미명시."
+        }
+      ]
+    },
+    {
+      "id": "floor-mats-front-rear-set",
+      "origin": "oem",
+      "titleKo": "플로어 매트 앞·뒤 세트",
+      "titleOriginal": "Genuine BMW NA5 iX3 Floor Mats Front & Rear SET LHD or RHD",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5용 정품 플로어 매트 앞·뒤 세트. LHD/RHD 선택형 리스팅입니다. 정확한 품번은 판매 페이지·딜러 확인이 필요합니다.",
+      "category": "interior",
+      "fitmentNotes": "BMW iX3 (NA5). LHD/RHD를 판매 옵션에서 확인.",
+      "disclaimer": "eBay 표시가·배송비 별도. 유럽 공식몰 카탈로그에 아직 없는 별도 SKU로 등록.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/287254254181",
+          "price": 376742,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 독일. 배송비 약 60,765원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "all-weather-rubber-trunk-mat",
+      "origin": "oem",
+      "titleKo": "올웨더 러버 트렁크 매트",
+      "titleOriginal": "Genuine BMW NA5 iX3 All Weather Rubber Luggage Boot Trunk Compartment Floor Mat",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5용 정품 올웨더 러버 트렁크 매트. 사이트에 있는 성형 매트·양면 매트와는 다른 올웨더 러버 타입 리스팅입니다.",
+      "category": "cargo",
+      "fitmentNotes": "BMW iX3 (NA5) 적재함. 성형(Formmatte)·양면(Wendematte)과 구분.",
+      "disclaimer": "eBay 표시가·배송비 별도. 품번은 판매 페이지에서 확인.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/277865796889",
+          "price": 391596,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 독일. 배송비 약 60,765원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "mp-side-panel-adhesive-kit-82145B4D9A1",
+      "origin": "oem",
+      "oemPartNumber": "82145B4D9A1",
+      "titleKo": "M Performance 사이드 패널 접착 키트",
+      "titleOriginal": "BMW iX3 NA5 M Performance Side Panel Adhesive Kit",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5 M Performance 사이드 패널용 정품 접착 키트. 품번 82145B4D9A1.",
+      "category": "exterior",
+      "fitmentNotes": "M Performance 사이드 패널 장착용. 패널 본체와 별도일 수 있습니다.",
+      "disclaimer": "eBay 표시가. 배송비 미명시.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/336742256261",
+          "price": 297422,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 영국."
+        }
+      ]
+    },
+    {
+      "id": "next-dark-emblem",
+      "origin": "oem",
+      "titleKo": "Next Dark 엠블럼",
+      "titleOriginal": "Genuine BMW Next Dark Emblem from the new BMW iX3 NA5 model",
+      "titleOriginalLang": "en",
+      "summaryKo": "신형 iX3(NA5) 계열 Next Dark 스타일 정품 엠블럼 리스팅.",
+      "category": "exterior",
+      "fitmentNotes": "전·후면·사이즈는 판매 페이지·VIN으로 확인.",
+      "disclaimer": "eBay 표시가. 무료 국제 배송으로 표기된 스냅샷 기준.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/327179360817",
+          "price": 108026,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 라트비아. 무료 국제 배송(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "roundel-emblem-badge",
+      "origin": "oem",
+      "titleKo": "뉴클래세 라운델 엠블럼 (전/후)",
+      "titleOriginal": "Genuine BMW NA5 iX3 Neue Klasse Roundel Emblem Badge FRONT / REAR",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5 Neue Klasse용 정품 라운델(원형 엠블럼) 배지. 전면 후드·후면 트렁크용 리스팅.",
+      "category": "exterior",
+      "fitmentNotes": "전면/후면 선택·호환은 판매 페이지 확인.",
+      "disclaimer": "eBay 표시가·배송비 별도.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/278240872288",
+          "price": 121462,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 독일. 배송비 약 33,758원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "heko-wind-deflectors-11013",
+      "origin": "thirdParty",
+      "brandKo": "HEKO",
+      "sellerSku": "11013",
+      "titleKo": "도어 윈드 디플렉터 4개 세트",
+      "titleOriginal": "For BMW iX3 II (NA5) 2025 Wind deflectors 4pc HEKO 11013",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5(2세대 iX3)용 HEKO 윈드 디플렉터 4피스. 서드파티.",
+      "category": "exterior",
+      "fitmentNotes": "BMW iX3 II (NA5) 5도어. 장착은 판매처 안내 따름.",
+      "disclaimer": "사제. BMW 보증·적합성은 판매처·장착점에서 확인.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/128070514470",
+          "price": 125895,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 라트비아. 배송비 약 54,737원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "soft-indoor-car-cover",
+      "origin": "thirdParty",
+      "brandKo": "shopautoabdeckung",
+      "titleKo": "실내용 소프트 차량 커버",
+      "titleOriginal": "Soft Indoor Car Cover for BMW iX3 (NA5)",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5 맞춤형 실내 보관용 소프트 커버. 서드파티.",
+      "category": "other",
+      "fitmentNotes": "BMW iX3 (NA5). 실외용과 구분.",
+      "disclaimer": "사제. 배송비 별도.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/168523297223",
+          "price": 223542,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 독일. 배송비 약 78,093원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "outdoor-car-cover",
+      "origin": "thirdParty",
+      "brandKo": "shopautoabdeckung",
+      "titleKo": "차량 커버 (실외·범용형)",
+      "titleOriginal": "Car Cover Suitable for BMW iX3 (NA5)",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5 대응 차량 커버. 실내용보다 저가·범용형 리스팅.",
+      "category": "other",
+      "fitmentNotes": "BMW iX3 (NA5). 재질·방수 등급은 판매 페이지 확인.",
+      "disclaimer": "사제. 배송비 별도.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/168523625972",
+          "price": 162386,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 독일. 배송비 약 89,404원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "ppf-bumper-precut",
+      "origin": "thirdParty",
+      "brandKo": "modzvault",
+      "titleKo": "프론트 범퍼 PPF (프리컷 TPU)",
+      "titleOriginal": "Pre-Cut Bumper PPF for BMW iX3 (2025+) NA5 TPU",
+      "titleOriginalLang": "en",
+      "summaryKo": "2025+ NA5용 프론트 범퍼 프리컷 TPU 보호필름. 서드파티.",
+      "category": "exterior",
+      "fitmentNotes": "전문 시공 권장. 시공비 미포함.",
+      "disclaimer": "사제. 배송비 별도.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/318656731705",
+          "price": 136842,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 영국. 배송비 약 27,368원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "ppf-bonnet-precut",
+      "origin": "thirdParty",
+      "brandKo": "modzvault",
+      "titleKo": "후드(본넷) PPF (프리컷 TPU)",
+      "titleOriginal": "Pre-Cut Bonnet PPF for BMW iX3 (2025+) NA5 TPU",
+      "titleOriginalLang": "en",
+      "summaryKo": "2025+ NA5용 후드 프리컷 TPU 보호필름. 서드파티.",
+      "category": "exterior",
+      "fitmentNotes": "전문 시공 권장. 시공비 미포함.",
+      "disclaimer": "사제. 배송비 별도.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/318652809931",
+          "price": 237194,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 영국. 배송비 약 27,368원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "rubber-boot-mat-5mm",
+      "origin": "thirdParty",
+      "brandKo": "Bebleys",
+      "titleKo": "5mm 헤비듀티 러버 트렁크 매트",
+      "titleOriginal": "5mm Heavy-Duty Rubber Boot Mat to fit BMW iX3 NA5 2025-present",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5용 두꺼운 사제 러버 트렁크 매트. BMW 정품 올웨더/성형 매트와 별개.",
+      "category": "cargo",
+      "fitmentNotes": "2025– 현재 NA5. 정품 매트와 병행 표기하지 않음.",
+      "disclaimer": "사제. 예상 배송비·통관이 클 수 있음(스냅샷).",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/117395574141",
+          "price": 105734,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 영국. 예상 배송비 약 126,698원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "carpet-boot-mat-tailored",
+      "origin": "thirdParty",
+      "brandKo": "TradeCarMats",
+      "titleKo": "맞춤 카펫 트렁크 매트",
+      "titleOriginal": "Tailored Carpet Boot Floor Mat for BMW iX3 NA5 2025-present",
+      "titleOriginalLang": "en",
+      "summaryKo": "NA5용 사제 맞춤 카펫 트렁크 매트.",
+      "category": "cargo",
+      "fitmentNotes": "2025– 현재 NA5.",
+      "disclaimer": "사제. 배송비 별도.",
+      "na5Dedicated": true,
+      "confidence": "inferred",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/237048996218",
+          "price": 38225,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 영국. 예상 배송비 약 88,583원(스냅샷)."
+        }
+      ]
+    },
+    {
+      "id": "key-cover-leather",
+      "origin": "thirdParty",
+      "brandKo": "blau-ct5",
+      "titleKo": "스마트키 가죽 케이스",
+      "titleOriginal": "Echt Rindsleder Schlüssel Hülle für BMW … ix3 na5",
+      "titleOriginalLang": "de",
+      "summaryKo": "소가죽 스마트키 커버. ix3 NA5 등 다차종 공용 표기 리스팅.",
+      "category": "other",
+      "fitmentNotes": "키 형상 호환을 판매 페이지에서 확인. 다차종 공용일 수 있음.",
+      "disclaimer": "사제. NA5 전용 여부는 미확인.",
+      "na5Dedicated": false,
+      "confidence": "unverified",
+      "markets": [
+        {
+          "country": "EB",
+          "sourceUrl": "https://www.ebay.com/itm/145561341328",
+          "price": 53296,
+          "currency": "KRW",
+          "asOf": "2026-09-11",
+          "channelKo": "eBay",
+          "priceNoteKo": "출발지 중국. 배송비 약 7,840원(스냅샷)."
+        }
       ]
     }
-  ]
+  ],
+  "sourceNoteKo": "유럽 BMW 공식몰 정품과 eBay·사제 제품을 나눠 두었어요. 가격·재고는 자주 바뀌고, eBay 원화는 참고용이에요(배송비·환율 별도)."
 }

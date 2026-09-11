@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ix3-na5/schemas/forum.schema.json",
+  "title": "Overseas forum thread metadata",
+  "type": "object",
+  "required": ["vehicleId", "status", "updatedAt", "syncedAt", "source", "items"],
+  "properties": {
+    "vehicleId": { "type": "string" },
+    "status": { "type": "string", "enum": ["placeholder", "ready"] },
+    "updatedAt": { "type": "string" },
+    "syncedAt": { "type": "string", "description": "ISO date or YYYY-MM-DD of last meta sync" },
+    "sourceNoteKo": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["id", "name", "url"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "url": { "type": "string" },
+        "forumId": { "type": "string" },
+        "lang": { "type": "string" }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "titleOriginal", "titleKo", "summaryKo", "url", "lastActivityAt"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "titleOriginal": { "type": "string", "description": "Original-language title (DE for MOTOR-TALK)" },
+          "titleKo": { "type": "string" },
+          "summaryKo": { "type": "string" },
+          "url": { "type": "string" },
+          "lastActivityAt": { "type": "string", "description": "YYYY-MM-DD" },
+          "replies": { "type": "integer", "minimum": 0 },
+          "views": { "type": "integer", "minimum": 0 },
+          "pinned": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

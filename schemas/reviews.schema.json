@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.ix3-na5/schemas/reviews.schema.json",
+  "title": "Reviews",
+  "type": "object",
+  "required": ["vehicleId", "status", "updatedAt", "items"],
+  "properties": {
+    "vehicleId": { "type": "string" },
+    "status": { "type": "string", "enum": ["placeholder", "ready"] },
+    "updatedAt": { "type": "string" },
+    "sourceNoteKo": { "type": "string" },
+    "priorityChannels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "nameKo", "handle"],
+        "properties": {
+          "id": { "type": "string" },
+          "nameKo": { "type": "string" },
+          "handle": { "type": "string" },
+          "url": { "type": "string" }
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "titleKo", "channelKo", "publishedAt", "url", "summaryKo"],
+        "properties": {
+          "id": { "type": "string" },
+          "titleKo": { "type": "string" },
+          "channelKo": { "type": "string" },
+          "channelId": { "type": "string" },
+          "publishedAt": { "type": "string", "description": "YYYY-MM-DD, newest first in UI" },
+          "url": { "type": "string" },
+          "lang": { "type": "string" },
+          "region": { "type": "string" },
+          "kind": { "type": "string", "enum": ["youtube", "article"] },
+          "summaryKo": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

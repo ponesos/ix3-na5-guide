@@ -1,0 +1,192 @@
+{
+  "vehicleId": "na5-ix3",
+  "status": "ready",
+  "updatedAt": "2026-09-09",
+  "syncedAt": "2026-09-09",
+  "sourceNoteKo": "독일 MOTOR-TALK의 BMW iX3 Neue Klasse(NA5) 게시판에서 제목과 분위기만 짧게 옮겨 왔어요. 본문은 원문에서 읽어 주세요.",
+  "source": {
+    "id": "motor-talk-na5",
+    "name": "MOTOR-TALK · BMW iX3 Neue Klasse (NA5)",
+    "url": "https://www.motor-talk.de/forum/bmw-ix3-neue-klasse-na5-b1240.html",
+    "forumId": "1240",
+    "lang": "de"
+  },
+  "items": [
+    {
+      "id": "mt-8649035",
+      "titleOriginal": "Erfahrungen mit dem Sportlenkrad?",
+      "titleKo": "스포츠 스티어링 휠 체감",
+      "summaryKo": "NA5 스포츠 스티어링 휠 그립·조작감에 대한 오너 경험 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/erfahrungen-mit-dem-sportlenkrad-t8649035.html",
+      "lastActivityAt": "2026-09-08",
+      "replies": 12,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8632444",
+      "titleOriginal": "Sägezahn Ladekurve",
+      "titleKo": "톱니형(사다리꼴이 아닌) 급속 충전 곡선",
+      "summaryKo": "DC 급속 충전 시 출력이 톱니처럼 오르내리는 현상과 배터리 예열·충전기 원인을 논의합니다.",
+      "url": "https://www.motor-talk.de/forum/saegezahn-ladekurve-t8632444.html",
+      "lastActivityAt": "2026-09-07",
+      "replies": 20,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8628248",
+      "titleOriginal": "Straffes Fahrwerk oder ist etwas kaputt?",
+      "titleKo": "서스펜션이 너무 硬い가, 고장인가?",
+      "summaryKo": "승차감이 과도하게 단단한지, 휠·타이어·정상 세팅 범위인지 묻는 체감 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/straffes-fahrwerk-oder-ist-etwas-kaputt-t8628248.html",
+      "lastActivityAt": "2026-09-06",
+      "replies": 18,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8614010",
+      "titleOriginal": "Umstieg vom Tesla Model Y (2022) auf den neuen BMW iX3 – eure Erfahrungen?",
+      "titleKo": "Model Y에서 신형 iX3로 바꾼 경험",
+      "summaryKo": "테슬라 Model Y 대비 승차·UI·충전·실사용 차이를 나누는 비교 경험 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/umstieg-vom-tesla-model-y-2022-auf-den-neuen-bmw-ix3-eure-erfahrungen-t8614010.html",
+      "lastActivityAt": "2026-09-05",
+      "replies": 25,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8613914",
+      "titleOriginal": "Geschwindigkeit Kühlerlüfter DC Laden",
+      "titleKo": "DC 충전 시 냉각팬 속도",
+      "summaryKo": "급속 충전 중 냉각팬 소음·회전이 예상보다 조용한지에 대한 오너 확인 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/geschwindigkeit-kuehlerluefter-dc-laden-t8613914.html",
+      "lastActivityAt": "2026-09-04",
+      "replies": 8,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8606453",
+      "titleOriginal": "Erfahrungen mit Standard Lautsprecher und Sitzen",
+      "titleKo": "기본 스피커·시트 경험",
+      "summaryKo": "기본 오디오·시트 만족도와 옵션(H&K 등) 대비 체감을 모으는 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/erfahrungen-mit-standard-lautsprecher-und-sitzen-t8606453.html",
+      "lastActivityAt": "2026-09-03",
+      "replies": 15,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8596004",
+      "titleOriginal": "Schwache Ladeleistung",
+      "titleKo": "급속 충전 출력이 기대보다 낮음",
+      "summaryKo": "HPC에서 피크 출력이 기대치보다 낮을 때 배터리 보호·냉각·충전기 측 요인을 점검하는 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/schwache-ladeleistung-t8596004.html",
+      "lastActivityAt": "2026-09-02",
+      "replies": 35,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8558983",
+      "titleOriginal": "Erste Erfahrungen nach einer Woche",
+      "titleKo": "인도 1주일 초기 경험",
+      "summaryKo": "고속도로 어시스트·승차감·실내 마감 등 인도 직후 1주 실사용 소감을 모은 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/erste-erfahrungen-nach-einer-woche-t8558983.html",
+      "lastActivityAt": "2026-09-01",
+      "replies": 80,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8545063",
+      "titleOriginal": "Fahrwerk umbauen lassen",
+      "titleKo": "서스펜션 개조 가능 여부",
+      "summaryKo": "승차감을 위해 애프터마켓 서스펜션으로 바꿀 수 있는지 묻는 논의예요.",
+      "url": "https://www.motor-talk.de/forum/fahrwerk-umbauen-lassen-t8545063.html",
+      "lastActivityAt": "2026-08-30",
+      "replies": 22,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8543752",
+      "titleOriginal": "Besitzer Erfahrungen",
+      "titleKo": "오너 종합 경험",
+      "summaryKo": "NA5 오너가 장단점·소모·실내·어시스트를 길게 공유하는 대표 경험 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/besitzer-erfahrungen-t8543752.html",
+      "lastActivityAt": "2026-08-28",
+      "replies": 320,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8532754",
+      "titleOriginal": "Fehlermeldungen - Problembehebung",
+      "titleKo": "오류 메시지·문제 해결",
+      "summaryKo": "경고등·디스플레이·원격 진단 등 고장 증상과 딜러·핫라인 대응을 모으는 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/fehlermeldungen-problembehebung-t8532754.html",
+      "lastActivityAt": "2026-08-25",
+      "replies": 40,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8522584",
+      "titleOriginal": "iX3 NK - Bilder von Userfahrzeugen",
+      "titleKo": "NA5 실차 사진 (유저)",
+      "summaryKo": "Neue Klasse iX3 실차 외장·내장 사진을 올리는 공유 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/ix3-nk-bilder-von-userfahrzeugen-t8522584.html",
+      "lastActivityAt": "2026-08-22",
+      "replies": 30,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8511895",
+      "titleOriginal": "Nervende \"Kleinigkeiten\"",
+      "titleKo": "거슬리는 작은 단점들",
+      "summaryKo": "무선충전·수납·충전 예측 등 실사용에서 거슬리는 소소한 이슈를 목록화하는 대형 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/nervende-kleinigkeiten-t8511895.html",
+      "lastActivityAt": "2026-08-20",
+      "replies": 880,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8486098",
+      "titleOriginal": "Neuer Bilder-Thread, Kommentare erwünscht!",
+      "titleKo": "새 사진 스레드",
+      "summaryKo": "NA5 실차·디테일 사진을 모으는 이미지 공유 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/neuer-bilder-thread-kommentare-erwuenscht-t8486098.html",
+      "lastActivityAt": "2026-08-15",
+      "replies": 1180,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8436729",
+      "titleOriginal": "Erwartungen zur Reichweite ix3 50 auf der Autobahn",
+      "titleKo": "고속도로에서 iX3 50 항속 기대치",
+      "summaryKo": "고속 주행 시 전비·항속에 대한 출시 전후 토론 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/erwartungen-zur-reichweite-ix3-50-auf-der-autobahn-diskussion-vor-markteinfuehrung-t8436729.html",
+      "lastActivityAt": "2026-08-10",
+      "replies": 300,
+      "views": 0,
+      "pinned": false
+    },
+    {
+      "id": "mt-8402777",
+      "titleOriginal": "Adaptives Fahrwerk",
+      "titleKo": "어댑티브 서스펜션",
+      "summaryKo": "어댑티브 댐퍼 옵션·체감·후속 적용 가능성을 논의하는 스레드예요.",
+      "url": "https://www.motor-talk.de/forum/adaptives-fahrwerk-t8402777.html",
+      "lastActivityAt": "2026-08-05",
+      "replies": 60,
+      "views": 0,
+      "pinned": false
+    }
+  ]
+}

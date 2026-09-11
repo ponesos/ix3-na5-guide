@@ -1,6 +1,4 @@
-import { loadJson, showError, bindHeader } from "./app.js";
-
-const VEHICLE_ID = "na5-ix3";
+import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
 
 const CATEGORY_KO = {
   purchase: "구매·보조금",
@@ -40,13 +38,26 @@ function renderFilters() {
   });
 }
 
+const CONFIDENCE_KO = {
+  confirmed: "공식·보도로 확인",
+  inferred: "자료 보고 짐작",
+  unverified: "아직 확인 전",
+  community: "오너들 체감",
+};
+
+function evidenceLine(item) {
+  const label = CONFIDENCE_KO[item.confidence] || "";
+  const parts = [label, item.asOf].filter(Boolean);
+  return parts.length ? `<p class="muted">${parts.join(" · ")}</p>` : "";
+}
+
 function renderCards() {
   const root = document.querySelector("[data-cards]");
   const list = filtered();
   const count = document.querySelector("[data-count]");
   if (count) count.textContent = `${list.length}개`;
   if (!list.length) {
-    root.innerHTML = `<p class="empty">항목이 없습니다.</p>`;
+    root.innerHTML = `<p class="empty">이 분류에는 아직 질문이 없어요.</p>`;
     return;
   }
   root.innerHTML = list
@@ -57,13 +68,13 @@ function renderCards() {
       const tags = (item.tags || [])
         .map((t) => `<span class="chip">${t}</span>`)
         .join("");
-      return `<article class="card tip-card">
-        <div><span class="chip">${CATEGORY_KO[item.category] || item.category}</span> ${tags}</div>
+      return `<article class="item">
+        <div class="chips"><span class="chip chip-on">${CATEGORY_KO[item.category] || item.category}</span>${tags}</div>
         <h2>${item.titleKo}</h2>
         <p class="tip-q"><strong>Q.</strong> ${item.questionKo}</p>
         <p class="tip-a"><strong>A.</strong> ${item.answerKo}</p>
         ${caveat}
-        <p class="muted">근거: 오너 커뮤니티 요약${item.asOf ? ` · ${item.asOf}` : ""} · ${item.confidence}</p>
+        ${evidenceLine(item)}
       </article>`;
     })
     .join("");
@@ -72,17 +83,17 @@ function renderCards() {
 async function main() {
   const mainEl = document.querySelector("main");
   try {
-    const [meta, tips] = await Promise.all([
-      loadJson("data/meta.json"),
-      loadJson(`data/vehicles/${VEHICLE_ID}/tips.json`),
-    ]);
-    bindHeader(meta);
-    state.items = tips.items || [];
+    const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
+    bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+    const tips = await tryLoadJson(`data/vehicles/${vehicleId}/tips.json`);
+    state.items = tips?.items || [];
     const note = document.querySelector("[data-source-note]");
-    if (note) note.textContent = tips.sourceNoteKo || "";
+    if (note) note.textContent = tips?.sourceNoteKo || "";
     const hl = document.querySelector("[data-highlights]");
-    if (hl && tips.highlights?.length) {
-      hl.innerHTML = `<ul>${tips.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>`;
+    if (hl) {
+      hl.innerHTML = tips?.highlights?.length
+        ? `<ul>${tips.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>`
+        : "";
     }
     renderFilters();
     renderCards();

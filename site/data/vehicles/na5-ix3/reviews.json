@@ -1,6 +1,193 @@
 {
   "vehicleId": "na5-ix3",
-  "status": "placeholder",
-  "updatedAt": "2026-09-08",
-  "items": []
+  "status": "ready",
+  "updatedAt": "2026-09-09",
+  "sourceNoteKo": "국내에서 자주 보는 유튜브 시승·리뷰를 모았어요. 모터그래프·한상기 채널에는 아직 신형 iX3 영상이 없을 수도 있어요.",
+  "priorityChannels": [
+    {
+      "id": "mocar",
+      "nameKo": "김한용의 MOCAR",
+      "handle": "@mocar_official",
+      "url": "https://www.youtube.com/@mocar_official"
+    },
+    {
+      "id": "woopa",
+      "nameKo": "우파푸른하늘",
+      "handle": "@woopa87",
+      "url": "https://www.youtube.com/@woopa87"
+    },
+    {
+      "id": "motline",
+      "nameKo": "모트라인",
+      "handle": "@motline",
+      "url": "https://www.youtube.com/@motline"
+    },
+    {
+      "id": "mediaauto",
+      "nameKo": "미디어오토",
+      "handle": "@mediaauto",
+      "url": "https://www.youtube.com/@mediaauto"
+    },
+    {
+      "id": "autoview",
+      "nameKo": "오토뷰",
+      "handle": "@autoview2009",
+      "url": "https://www.youtube.com/@autoview2009"
+    },
+    {
+      "id": "motorgraph",
+      "nameKo": "모터그래프",
+      "handle": "@motorgraph",
+      "url": "https://www.youtube.com/@motorgraph"
+    },
+    {
+      "id": "hansangki",
+      "nameKo": "한상기 오토프레스",
+      "handle": "@hansangki",
+      "url": "https://www.youtube.com/@hansangki"
+    }
+  ],
+  "items": [
+    {
+      "id": "mocar-ix3-400kw-2026-08",
+      "titleKo": "BMW iX3 진짜 400kW? 테슬라·현대 제치고 국내 최고? 검증의 시간!",
+      "channelKo": "김한용의 MOCAR",
+      "channelId": "mocar",
+      "publishedAt": "2026-08-03",
+      "url": "https://www.youtube.com/watch?v=81e2ijUG_eg",
+      "lang": "ko",
+      "region": "kr",
+      "kind": "youtube",
+      "summaryKo": "신형 iX3(NA5) 초급속 충전을 검증하는 영상이에요. 400kW급 충전과 국내 경쟁 모델 대비 포인트를 짚어요.",
+      "tags": [
+        "차징",
+        "검증"
+      ]
+    },
+    {
+      "id": "autoview-ix3-50-2026-08",
+      "titleKo": "이것이 최신 BMW 전기차… 2026 BMW iX3 50 xDrive 리뷰 / 오토뷰 로드테스트",
+      "channelKo": "오토뷰",
+      "channelId": "autoview",
+      "publishedAt": "2026-08-01",
+      "url": "https://www.youtube.com/watch?v=FW7utxbajvU",
+      "lang": "ko",
+      "region": "kr",
+      "kind": "youtube",
+      "summaryKo": "오토뷰 로드테스트예요. iX3 50 xDrive의 계측·주행·완성도를 중심으로 봐요.",
+      "tags": [
+        "로드테스트",
+        "50 xDrive"
+      ]
+    },
+    {
+      "id": "motline-ix3-2026-07",
+      "titleKo": "한국 1등을 갈아치운 미친 전기차… 이제 완전히 새로운 시대가 온다 [BMW iX3, 윤성로 시승기]",
+      "channelKo": "모트라인",
+      "channelId": "motline",
+      "publishedAt": "2026-07-16",
+      "url": "https://www.youtube.com/watch?v=8IdZxEd_rmE",
+      "lang": "ko",
+      "region": "kr",
+      "kind": "youtube",
+      "summaryKo": "모트라인 윤성로 시승기예요. NA5 iX3의 주행 감각과 ‘새 시대’ 느낌을 강조해요.",
+      "tags": [
+        "시승"
+      ]
+    },
+    {
+      "id": "mediaauto-ix3-2026-06",
+      "titleKo": "신형 iX3 시승기… 진짜 끝내주는데, 두 개의 '발작버튼'",
+      "channelKo": "미디어오토",
+      "channelId": "mediaauto",
+      "publishedAt": "2026-06-21",
+      "url": "https://www.youtube.com/watch?v=e184yBXxM-0",
+      "lang": "ko",
+      "region": "kr",
+      "kind": "youtube",
+      "summaryKo": "국내 시승 소감이에요. 잘된 점과 함께 아쉬운 점(발작버튼)도 솔직하게 짚어요.",
+      "tags": [
+        "시승",
+        "50 xDrive"
+      ]
+    },
+    {
+      "id": "woopa-ix3-2026-06",
+      "titleKo": "테슬라 모델Y 비교불가…! 가격도 싸다 7,990만원 BMW iX3 최초 시승기!",
+      "channelKo": "우파푸른하늘",
+      "channelId": "woopa",
+      "publishedAt": "2026-06-21",
+      "url": "https://www.youtube.com/watch?v=SCzfkJVk-sM",
+      "lang": "ko",
+      "region": "kr",
+      "kind": "youtube",
+      "summaryKo": "우파푸른하늘 국내 최초 시승기예요. SE 시작가·모델 Y 대비 인상, 실차 느낌 위주예요.",
+      "tags": [
+        "시승",
+        "SE"
+      ]
+    },
+    {
+      "id": "mocar-ix3-2026-06",
+      "titleKo": "7990만원 BMW iX3 계약급증 이유?! 주행부터 인포테인먼트까지, 시스템이 완전달라!",
+      "channelKo": "김한용의 MOCAR",
+      "channelId": "mocar",
+      "publishedAt": "2026-06-21",
+      "url": "https://www.youtube.com/watch?v=sC6PbRyrGi8",
+      "lang": "ko",
+      "region": "kr",
+      "kind": "youtube",
+      "summaryKo": "MOCAR 국내 시승·해설이에요. 주행·인포테인먼트 등 시스템 변화를 계약 수요와 함께 설명해요.",
+      "tags": [
+        "시승",
+        "인포테인먼트"
+      ]
+    },
+    {
+      "id": "mocar-ix3-reveal-2026-03",
+      "titleKo": "BMW iX3 국내 최초 공개!…BMW의 미래가 이렇다고?!",
+      "channelKo": "김한용의 MOCAR",
+      "channelId": "mocar",
+      "publishedAt": "2026-03-24",
+      "url": "https://www.youtube.com/watch?v=MUa4SzEXlMs",
+      "lang": "ko",
+      "region": "kr",
+      "kind": "youtube",
+      "summaryKo": "국내 공개 현장과 첫인상을 담은 영상이에요. 양산 시승 전 공개 콘텐츠예요.",
+      "tags": [
+        "공개"
+      ]
+    },
+    {
+      "id": "mediaauto-ix3-first-2025-12",
+      "titleKo": "BMW iX3 최초 시승기 // 노이어클라세, 전기차, 469마력",
+      "channelKo": "미디어오토",
+      "channelId": "mediaauto",
+      "publishedAt": "2025-12-03",
+      "url": "https://www.youtube.com/watch?v=eqGHpEieYUI",
+      "lang": "ko",
+      "region": "overseas-first",
+      "kind": "youtube",
+      "summaryKo": "해외 선행 시승(차봤서영 협업)이에요. 노이어 클라쎄·469마력 등 초기 인상을 전해요.",
+      "tags": [
+        "선행시승"
+      ]
+    },
+    {
+      "id": "mediaauto-ix3-design-2025-11",
+      "titleKo": "BMW ix3 실차 리뷰 // 디자인 리뷰, 시승, 노이어클라세, IX3 50",
+      "channelKo": "미디어오토",
+      "channelId": "mediaauto",
+      "publishedAt": "2025-11-18",
+      "url": "https://www.youtube.com/watch?v=4r7QMMLyn5c",
+      "lang": "ko",
+      "region": "overseas-first",
+      "kind": "youtube",
+      "summaryKo": "실차 디자인과 초기 시승 리뷰예요. 국내 출시 전 콘텐츠예요.",
+      "tags": [
+        "디자인",
+        "선행시승"
+      ]
+    }
+  ]
 }

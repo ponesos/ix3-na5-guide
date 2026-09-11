@@ -3,37 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>iX3 NA5 가이드 · 비교</title>
+    <title>글로벌 EV 노트 · 비교</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="css/app.css" />
   </head>
   <body>
-    <div class="banner">BMW·BMW 코리아와 무관한 비공식 사이트입니다.</div>
-    <header class="site-header">
-      <a class="brand" href="index.html">iX3 NA5 가이드 <span class="tag">비공식</span></a>
-      <p class="meta-date" data-updated></p>
+    <p class="notice">BMW AG·BMW 그룹 코리아와는 무관한 비공식 안내 사이트예요.</p>
+    <header class="chrome">
+      <div class="chrome-inner">
+        <a class="brand" href="index.html">글로벌 EV 노트 <span class="tag">비공식</span></a>
+        <div class="chrome-meta">
+          <p class="meta-date" data-updated></p>
+          <div data-vehicle-switcher></div>
+        </div>
+        <nav class="nav" aria-label="주요">
+          <ul></ul>
+        </nav>
+      </div>
     </header>
-    <nav aria-label="주요">
-      <ul>
-        <li><a href="index.html">개요</a></li>
-        <li><a href="accessories.html">액세서리</a></li>
-        <li><a href="tips.html">오너 FAQ</a></li>
-        <li><a href="compare.html" aria-current="page">비교</a></li>
-        <li><a href="reviews.html">시승기</a></li>
-      </ul>
-    </nav>
-    <main>
-      <h1>동급 비교</h1>
-      <p class="lede">구매 검토용 비교표는 Phase 2입니다. 데이터 자리만 <code>data/vehicles/na5-ix3/competitors.json</code>에 있습니다.</p>
-      <div class="placeholder-box">
-        <p><strong>제안 비교군</strong> (확정은 JSON으로)</p>
+    <main id="content">
+      <header class="page-head">
+        <h1>동급 비교</h1>
+        <p>비교표는 아직 준비 중이에요. 곧 채워 둘게요.</p>
+      </header>
+      <div class="placeholder">
+        <p><strong>같이 보면 좋은 차</strong></p>
         <p>Tesla Model Y · Genesis GV60 · Mercedes-Benz EQE SUV · Audi Q6 e-tron · Porsche Macan Electric · Hyundai Ioniq 5</p>
-        <p class="muted">축: 국내 가격대, 인증 항속, 급속·800V, 구동, 전장·적재, 실내·OTA. 출처를 칸마다 남깁니다.</p>
+        <p class="muted">비교해 볼 항목: 국내 가격대, 주행 가능 거리, 급속·800V, 구동, 전장·적재.</p>
       </div>
     </main>
-    <footer>요구사항은 docs/REQUIREMENTS.md, 화면 계획은 docs/UI.md.</footer>
+    <footer class="site-footer">숫자마다 어디서 왔는지 출처를 남겨 둘게요.</footer>
     <script type="module">
-      import { loadJson, bindHeader } from "./js/app.js";
-      loadJson("data/meta.json").then(bindHeader);
+      import { loadSiteContext, bindChrome, showError } from "./js/app.js";
+      const mainEl = document.querySelector("main");
+      try {
+        const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
+        bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+      } catch (err) {
+        showError(mainEl, err);
+      }
     </script>
   </body>
 </html>

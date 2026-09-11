@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="국내 제원·트림·가격. 비공식 안내." />
-    <title>글로벌 EV 노트 · 모델 정보</title>
+    <meta name="description" content="수입 전기차 제원·트림·가격과 액세서리를 모아 둔 비공식 안내." />
+    <title>글로벌 EV 노트 · 차종</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="css/app.css" />
@@ -26,18 +26,15 @@
     </header>
     <section class="hero">
       <div class="hero-inner">
-        <p class="hero-kicker" data-hero-kicker></p>
-        <h1 data-hero-title>모델 정보</h1>
-        <p class="hero-lead" data-hero-lead></p>
+        <p class="hero-kicker">비공식 · 수입 전기차</p>
+        <h1>글로벌 EV 노트</h1>
+        <p class="hero-lead" data-tagline>보고 싶은 차를 골라 주세요. <span data-count></span></p>
       </div>
     </section>
     <main id="content">
-      <dl class="stats" data-stats></dl>
-      <section class="section" data-trims></section>
-      <section class="section" data-specs></section>
-      <section class="section" data-sources></section>
+      <div class="vehicle-grid" data-vehicles></div>
     </main>
-    <footer class="site-footer">가격·주행 가능 거리는 출처 기준일 기준이에요. 액세서리 원화는 환율 스냅샷으로 짐작한 값이에요.</footer>
-    <script type="module" src="js/render-model.js?v=20260911g"></script>
+    <footer class="site-footer">차종을 고르면 제원·액세서리·FAQ·시승·뉴스를 이어서 볼 수 있어요.</footer>
+    <script type="module" src="js/render-hub.js?v=20260911g"></script>
   </body>
 </html>
