@@ -166,6 +166,13 @@ export function bindChrome(opts) {
     dateEl.textContent = `${meta.updatedAt} 기준`;
   }
 
+  const notice = document.querySelector("[data-notice]");
+  if (notice) {
+    notice.textContent =
+      meta.purposeKo ||
+      "수입 전기차 제원·가격·FAQ·액세서리를 한곳에서 빠르게 살펴보는 노트예요.";
+  }
+
   const brand = document.querySelector(".brand");
   if (brand && meta.siteName) {
     brand.innerHTML = `${meta.siteName} <span class="tag">비공식</span>`;
