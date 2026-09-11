@@ -119,7 +119,7 @@ function renderCards() {
     return;
   }
 
-  root.innerHTML = `<div class="rail" aria-label="액세서리"><div class="rail-track">${list
+  root.innerHTML = `<div class="rail rail-acc" aria-label="액세서리"><div class="rail-track">${list
     .map((item) => {
       const origin = item.origin || "oem";
       const chips = [
@@ -180,22 +180,19 @@ function renderCards() {
           }${primary.priceNoteKo ? ` · ${primary.priceNoteKo}` : ""}</p>`
         : "";
 
-      return `<article class="rail-card rail-card-wide">
+      return `<article class="rail-card rail-card-wide rail-card-acc">
         <div class="chips">${chips}</div>
         <strong class="rail-card-title">${item.titleKo}</strong>
         <p class="rail-card-price">${priceLabel}</p>
         <p class="rail-card-meta">${item.summaryKo}</p>
         ${partRow}
-        <details class="expand">
-          <summary>가격 · 링크</summary>
-          <div class="expand-body">
-            ${priceNote}
-            ${notes}
-            ${disc}
-            ${extraMarkets}
-            <div class="actions" style="margin-top:0.65rem">${links}</div>
-          </div>
-        </details>
+        <div class="acc-details">
+          ${priceNote}
+          ${notes}
+          ${disc}
+          ${extraMarkets}
+          <div class="actions">${links}</div>
+        </div>
       </article>`;
     })
     .join("")}</div></div>`;

@@ -149,6 +149,7 @@
           "properties": {
             "koreaCertifiedKm": { "type": "number" },
             "koreaCertifiedKmMin": { "type": "number" },
+            "koreaByWheelKo": { "type": "string" },
             "wltpKm": { "type": "number" }
           }
         },

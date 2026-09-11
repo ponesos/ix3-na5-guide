@@ -11,9 +11,13 @@ import { initUx, initReveal, resetRails } from "./ux.js";
 function rangeText(range) {
   if (!range?.koreaCertifiedKm) return "—";
   if (range.koreaCertifiedKmMin && range.koreaCertifiedKm) {
-    return `${range.koreaCertifiedKmMin.toLocaleString("ko-KR")}–${range.koreaCertifiedKm.toLocaleString("ko-KR")} km`;
+    return `${range.koreaCertifiedKm.toLocaleString("ko-KR")} · ${range.koreaCertifiedKmMin.toLocaleString("ko-KR")} km`;
   }
   return `${range.koreaCertifiedKm.toLocaleString("ko-KR")} km`;
+}
+
+function rangeWheelNote(range) {
+  return range?.koreaByWheelKo || "";
 }
 
 function trimHighlightsList(trim) {
@@ -70,10 +74,13 @@ async function main() {
     }
 
     if (stats) {
+      const krRangeNote = rangeWheelNote(kr.range);
       stats.innerHTML = `
         <article class="rail-card rail-card-stat"><dt>가격대</dt><dd>${formatPriceBand(kr.trims)}</dd></article>
-        <article class="rail-card rail-card-stat"><dt>주행 가능 거리</dt><dd>${rangeText(kr.range)}</dd></article>
-        <article class="rail-card rail-card-stat"><dt>주행 가능 거리 (WLTP)</dt><dd>${
+        <article class="rail-card rail-card-stat"><dt>국내 주행거리</dt><dd>${rangeText(kr.range)}</dd>${
+          krRangeNote ? `<p class="rail-card-meta">${krRangeNote}</p>` : ""
+        }</article>
+        <article class="rail-card rail-card-stat"><dt>WLTP 주행거리</dt><dd>${
           kr.range?.wltpKm ? `${kr.range.wltpKm.toLocaleString("ko-KR")} km` : "—"
         }</dd></article>
         <article class="rail-card rail-card-stat"><dt>가속력 (0–100)</dt><dd>${

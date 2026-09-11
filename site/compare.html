@@ -6,7 +6,7 @@
     <title>글로벌 EV 노트 · 비교</title>
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <link rel="stylesheet" href="css/app.css?v=20260912m5" />
+    <link rel="stylesheet" href="css/app.css?v=20260912m12" />
   </head>
   <body>
     <p class="notice" data-notice>수입 전기차 제원·가격·FAQ·액세서리를 한곳에서 빠르게 살펴보는 노트예요.</p>
@@ -17,9 +17,6 @@
           <p class="meta-date" data-updated></p>
           <div data-vehicle-switcher></div>
         </div>
-        <nav class="nav" aria-label="주요">
-          <ul></ul>
-        </nav>
       </div>
     </header>
     <main id="content" class="main-flush">
@@ -63,7 +60,7 @@
     </main>
     <footer class="site-footer">숫자마다 어디서 왔는지 출처를 남겨 둘게요.</footer>
     <script type="module">
-      import { loadSiteContext, bindChrome, showError } from "./js/app.js?v=20260912m5";
+      import { loadSiteContext, bindChrome, showError } from "./js/app.js?v=20260912m7";
       import { initUx } from "./js/ux.js";
       const mainEl = document.querySelector("main");
       try {

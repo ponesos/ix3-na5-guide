@@ -5,7 +5,7 @@
   "displayNameEn": "THE NEW BMW iX3",
   "platform": "Neue Klasse",
   "bodyType": "SAV",
-  "notesKo": "구형 iX3(G08)와는 차체·부품이 달라요. 국내 제원은 상품자료·출시 보도 기준(공차 2,360kg, 배터리 113.4kWh gross, 주행 가능 거리 588–611km)을 우선했어요.",
+  "notesKo": "구형 iX3(G08)와는 차체·부품이 달라요. 국내 제원은 상품자료·출시 보도 기준(공차 2,360kg, 배터리 113.4kWh gross, 국내 인증 주행거리 20인치 611km·21–22인치 588km)을 우선했어요.",
   "markets": {
     "kr": {
       "onSale": true,
@@ -181,6 +181,7 @@
       "range": {
         "koreaCertifiedKmMin": 588,
         "koreaCertifiedKm": 611,
+        "koreaByWheelKo": "20인치 611km · 21–22인치 588km",
         "wltpKm": 805
       },
       "charging": {

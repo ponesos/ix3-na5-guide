@@ -179,14 +179,8 @@ export function bindChrome(opts) {
     brand.setAttribute("href", vehicleHref("index.html", vid));
   }
 
-  const nav = document.querySelector(".nav ul");
-  if (nav) {
-    nav.innerHTML = NAV_ITEMS.map((item) => {
-      const href = item.hub ? "vehicles.html" : vehicleHref(item.page, vid);
-      const isCurrent = current === item.page;
-      return `<li><a href="${href}"${isCurrent ? ' aria-current="page"' : ""}>${item.label}</a></li>`;
-    }).join("");
-  }
+  const nav = document.querySelector(".nav");
+  if (nav) nav.remove();
 
   const switcher = document.querySelector("[data-vehicle-switcher]");
   if (switcher && catalog) {

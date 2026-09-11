@@ -20,7 +20,7 @@
   --max: 100%;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --card-w: calc(100vw - var(--pad) - var(--pad-right) - 2.5rem);
-  --chrome-sticky: 5.5rem;
+  --chrome-sticky: 5.75rem;
 }
 
 *,
@@ -90,8 +90,56 @@ a:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem 0.85rem;
-  padding: 0.75rem var(--pad-right) 0.45rem var(--pad);
+  gap: 0.35rem 0.75rem;
+  padding: 0.55rem var(--pad-right) 0.4rem var(--pad);
+}
+
+.explore-bar {
+  border-top: 1px solid var(--line);
+  padding: 0.28rem 0 0.32rem;
+  background: rgba(244, 245, 247, 0.96);
+}
+
+.explore-rail {
+  padding-block: 0;
+}
+
+.explore-rail .rail-track {
+  gap: 0.35rem;
+  padding-block: 0;
+}
+
+.rail-card-nav {
+  flex: 0 0 auto;
+  min-width: 0;
+  max-width: none;
+  min-height: 0;
+  padding: 0.28rem 0.62rem;
+  gap: 0;
+  border-radius: 999px;
+  box-shadow: none;
+  justify-content: center;
+}
+
+.rail-card-nav .rail-card-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.rail-card-nav .rail-card-meta {
+  display: none;
+}
+
+.rail-card-nav.is-current {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.rail-card-nav.is-current .rail-card-title,
+.rail-card-nav.is-current .rail-card-meta {
+  color: #fff;
 }
 
 .brand {
@@ -801,14 +849,111 @@ tbody th {
   box-sizing: border-box;
 }
 
+/* Must beat .rail-card min-height (same specificity, later rules win) */
+.rail-card.rail-card-nav {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  min-height: 0 !important;
+  height: auto;
+  padding: 0.32rem 0.7rem;
+  gap: 0;
+  border-radius: 999px;
+  box-shadow: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-rail .rail-track {
+  align-items: center;
+}
+
 .rail-card-wide {
   flex-basis: var(--card-w);
   min-height: 11.5rem;
 }
 
+.rail-card.rail-card-acc {
+  min-height: 0 !important;
+  height: auto;
+  padding: 0.8rem 0.85rem 0.85rem;
+  gap: 0.3rem;
+}
+
+.rail-acc .rail-track {
+  align-items: flex-start;
+}
+
+.rail-card-acc .rail-card-title {
+  font-size: 1.05rem;
+}
+
+.rail-card-acc .rail-card-price {
+  font-size: 1.15rem;
+}
+
+.rail-card-acc .rail-card-meta {
+  font-size: 0.84rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rail-card-acc .expand {
+  margin-top: 0.15rem;
+  padding: 0;
+  border-bottom: 0;
+}
+
+.rail-card-acc .expand > summary {
+  padding: 0.45rem 0 0.25rem;
+  font-size: 0.88rem;
+  min-height: 0;
+}
+
+.rail-card-acc .expand-body {
+  padding: 0 0 0.15rem;
+  font-size: 0.84rem;
+}
+
+.rail-card-acc .acc-details {
+  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+
+.rail-card-acc .acc-details .muted {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.rail-card-acc .acc-details .actions {
+  margin-top: 0.15rem;
+}
+
+.rail-card-acc .part-row {
+  margin: 0.15rem 0;
+}
+
+.rail-card-acc .btn {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.82rem;
+}
+
 .rail-card-stat {
   min-height: 7.25rem;
   justify-content: flex-end;
+}
+
+.rail-card-stat .rail-card-meta {
+  margin: 0.15rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.35;
 }
 
 .rail-card-stat dt {
