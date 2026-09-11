@@ -1,4 +1,5 @@
 import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
+import { initUx, initReveal } from "./ux.js";
 
 function sortByDateDesc(items) {
   return [...items].sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
@@ -26,29 +27,28 @@ function renderCards(items) {
   const list = sortByDateDesc(items);
   if (count) count.textContent = `${list.length}개`;
   if (!list.length) {
-    root.innerHTML = `<p class="empty">아직 올린 시승기가 없어요.</p>`;
+    root.innerHTML = `<p class="empty" style="margin:0 var(--pad)">아직 올린 시승기가 없어요.</p>`;
     return;
   }
-  root.innerHTML = list
-    .map((item, idx) => {
-      const tags = (item.tags || [])
-        .map((t) => `<span class="chip">${t}</span>`)
-        .join("");
+  root.innerHTML = `<div class="rail" aria-label="시승기"><div class="rail-track">${list
+    .map((item) => {
+      const tags = (item.tags || []).map((t) => `<span class="chip">${t}</span>`).join("");
       const region =
         item.region === "overseas-first"
           ? `<span class="chip">선행시승</span>`
           : item.region === "kr"
             ? `<span class="chip chip-on">국내</span>`
             : "";
-      return `<article class="item" style="animation-delay:${Math.min(idx, 8) * 0.04}s">
+      return `<article class="rail-card rail-card-wide">
         <div class="chips">${region}${tags}</div>
-        <h2>${item.titleKo}</h2>
-        <p class="orig">${item.channelKo} · ${item.publishedAt}</p>
-        <p class="summary">${item.summaryKo}</p>
+        <strong class="rail-card-title">${item.titleKo}</strong>
+        <p class="rail-card-meta">${item.channelKo} · ${item.publishedAt}</p>
+        <p class="summary" style="flex:1">${item.summaryKo}</p>
         <p><a class="btn" href="${item.url}" target="_blank" rel="noopener noreferrer">영상 보러 가기</a></p>
       </article>`;
     })
-    .join("");
+    .join("")}</div></div>`;
+  initReveal();
 }
 
 async function main() {
@@ -56,10 +56,11 @@ async function main() {
   try {
     const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
     bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+    initUx({ vehicleId });
     const reviews = await tryLoadJson(`data/vehicles/${vehicleId}/reviews.json`);
     const note = document.querySelector("[data-source-note]");
     if (note) note.textContent = reviews?.sourceNoteKo || "";
-    renderChannels(reviews?.priorityChannels);
+    renderChannels(reviews?.channels);
     renderCards(reviews?.items || []);
   } catch (err) {
     showError(mainEl, err);

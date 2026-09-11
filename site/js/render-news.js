@@ -1,4 +1,5 @@
 import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
+import { initUx, initReveal } from "./ux.js";
 
 function sortByDateDesc(items) {
   return [...items].sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
@@ -10,23 +11,22 @@ function renderCards(items) {
   const list = sortByDateDesc(items);
   if (count) count.textContent = `${list.length}건`;
   if (!list.length) {
-    root.innerHTML = `<p class="empty">아직 모아 둔 뉴스가 없어요.</p>`;
+    root.innerHTML = `<p class="empty" style="margin:0 var(--pad)">아직 모아 둔 뉴스가 없어요.</p>`;
     return;
   }
-  root.innerHTML = list
-    .map((item, idx) => {
-      const tags = (item.tags || [])
-        .map((t) => `<span class="chip">${t}</span>`)
-        .join("");
-      return `<article class="item" style="animation-delay:${Math.min(idx, 8) * 0.04}s">
+  root.innerHTML = `<div class="rail" aria-label="뉴스"><div class="rail-track">${list
+    .map((item) => {
+      const tags = (item.tags || []).map((t) => `<span class="chip">${t}</span>`).join("");
+      return `<article class="rail-card rail-card-wide">
         <div class="chips">${tags}</div>
-        <h2>${item.titleKo}</h2>
-        <p class="orig">${item.outletKo} · ${item.publishedAt}</p>
-        <p class="summary">${item.summaryKo}</p>
+        <strong class="rail-card-title">${item.titleKo}</strong>
+        <p class="rail-card-meta">${item.outletKo} · ${item.publishedAt}</p>
+        <p class="summary" style="flex:1">${item.summaryKo}</p>
         <p><a class="btn" href="${item.url}" target="_blank" rel="noopener noreferrer">원문 읽어 보기</a></p>
       </article>`;
     })
-    .join("");
+    .join("")}</div></div>`;
+  initReveal();
 }
 
 async function main() {
@@ -34,6 +34,7 @@ async function main() {
   try {
     const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
     bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+    initUx({ vehicleId });
     const news = await tryLoadJson(`data/vehicles/${vehicleId}/news.json`);
     const note = document.querySelector("[data-source-note]");
     if (note) note.textContent = news?.sourceNoteKo || "";

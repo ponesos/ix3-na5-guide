@@ -22,24 +22,54 @@
         </nav>
       </div>
     </header>
-    <main id="content">
-      <header class="page-head">
-        <h1>동급 비교</h1>
-        <p>비교표는 아직 준비 중이에요. 곧 채워 둘게요.</p>
-      </header>
-      <div class="placeholder">
-        <p><strong>같이 보면 좋은 차</strong></p>
-        <p>Tesla Model Y · Genesis GV60 · Mercedes-Benz EQE SUV · Audi Q6 e-tron · Porsche Macan Electric · Hyundai Ioniq 5</p>
-        <p class="muted">비교해 볼 항목: 국내 가격대, 주행 가능 거리, 급속·800V, 구동, 전장·적재.</p>
-      </div>
+    <main id="content" class="main-flush">
+      <section class="story reveal">
+        <div class="story-inner">
+          <p class="story-kicker">준비 중</p>
+          <h1 class="story-title" style="font-size:clamp(2rem,7vw,2.8rem)">동급 비교</h1>
+          <p class="story-lead">비교표는 아직 채우는 중이에요. 곧 숫자로 나란히 볼 수 있게 할게요.</p>
+        </div>
+      </section>
+      <section class="story story-muted reveal">
+        <div class="story-inner">
+          <p class="story-kicker">미리 보기</p>
+          <h2 class="story-title">같이 보면 좋은 차</h2>
+          <p class="story-lead">후보만 먼저 모아 두었어요.</p>
+          <div class="chip-rail" aria-label="비교 후보">
+            <span class="chip">Tesla Model Y</span>
+            <span class="chip">Genesis GV60</span>
+            <span class="chip">Mercedes-Benz EQE SUV</span>
+            <span class="chip">Audi Q6 e-tron</span>
+            <span class="chip">Porsche Macan Electric</span>
+            <span class="chip">Hyundai Ioniq 5</span>
+          </div>
+        </div>
+      </section>
+      <section class="story reveal">
+        <div class="story-inner">
+          <p class="story-kicker">항목</p>
+          <h2 class="story-title">곧 비교할 것</h2>
+        </div>
+        <div class="rail" aria-label="비교 항목">
+          <div class="rail-track">
+            <article class="rail-card"><strong class="rail-card-title">국내 가격대</strong><span class="rail-card-meta">트림·세율 기준</span></article>
+            <article class="rail-card"><strong class="rail-card-title">주행 가능 거리</strong><span class="rail-card-meta">국내 인증 · WLTP</span></article>
+            <article class="rail-card"><strong class="rail-card-title">급속 · 800V</strong><span class="rail-card-meta">DC · 아키텍처</span></article>
+            <article class="rail-card"><strong class="rail-card-title">구동</strong><span class="rail-card-meta">RWD · AWD</span></article>
+            <article class="rail-card"><strong class="rail-card-title">전장 · 적재</strong><span class="rail-card-meta">치수 · 트렁크</span></article>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">숫자마다 어디서 왔는지 출처를 남겨 둘게요.</footer>
     <script type="module">
       import { loadSiteContext, bindChrome, showError } from "./js/app.js";
+      import { initUx } from "./js/ux.js";
       const mainEl = document.querySelector("main");
       try {
         const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
         bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+        initUx({ vehicleId });
       } catch (err) {
         showError(mainEl, err);
       }

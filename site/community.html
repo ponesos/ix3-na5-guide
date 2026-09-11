@@ -12,7 +12,7 @@
   <body>
     <a class="skip" href="#content">본문으로</a>
     <p class="notice">BMW AG·BMW 그룹 코리아와는 무관한 비공식 안내 사이트예요. 포럼 본문은 옮기지 않았고, 자세한 이야기는 MOTOR-TALK에서 봐 주세요.</p>
-        <header class="chrome">
+    <header class="chrome">
       <div class="chrome-inner">
         <a class="brand" href="index.html">글로벌 EV 노트 <span class="tag">비공식</span></a>
         <div class="chrome-meta">
@@ -24,23 +24,27 @@
         </nav>
       </div>
     </header>
-    <main id="content">
-      <header class="page-head">
+    <main id="content" class="main-flush">
+      <header class="page-head page-head-tight story-inner reveal">
         <h1>커뮤니티</h1>
-        <p>독일 MOTOR-TALK의 NA5 보드에서 제목과 분위기만 짧게 모아 봤어요. <span data-count></span></p>
+        <p>제목과 분위기만 짧게 — 본문은 원문에서. <span data-count></span></p>
+        <p class="muted" data-source-note></p>
+        <p class="muted" data-source-link></p>
       </header>
-      <p class="muted" data-source-note></p>
-      <p class="muted" data-source-link></p>
-      <div class="filters">
-        <div class="filter-row" data-sort>
-          <span>정렬</span>
-          <button type="button" data-sort-btn="latest" aria-pressed="true">최신</button>
-          <button type="button" data-sort-btn="popular" aria-pressed="false">인기</button>
+      <div class="story-inner filters-sticky">
+        <div class="filters filters-scroll">
+          <div class="filter-row" data-sort>
+            <span>정렬</span>
+            <button type="button" data-sort-btn="latest" aria-pressed="true">최신</button>
+            <button type="button" data-sort-btn="popular" aria-pressed="false">인기</button>
+          </div>
         </div>
       </div>
-      <div class="list" data-cards></div>
+      <section class="story reveal" style="padding-top:0">
+        <div class="list-rail list-rail-grid" data-cards></div>
+      </section>
     </main>
     <footer class="site-footer">스레드 본문·닉네임은 올리지 않아요. 국내 카페 연동은 없고, 나중에 사이트 안 포럼을 열어 볼 계획이에요.</footer>
-    <script type="module" src="js/render-community.js?v=20260911g"></script>
+    <script type="module" src="js/render-community.js?v=20260912ux"></script>
   </body>
 </html>

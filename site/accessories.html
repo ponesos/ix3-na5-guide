@@ -12,7 +12,7 @@
   <body>
     <a class="skip" href="#content">본문으로</a>
     <p class="notice">BMW AG·BMW 그룹 코리아와는 무관한 비공식 안내 사이트예요. 정품과 서드파티를 나눠 두었고, 국내 가격은 판매 시점·판매처마다 달라질 수 있어요.</p>
-        <header class="chrome">
+    <header class="chrome">
       <div class="chrome-inner">
         <a class="brand" href="index.html">글로벌 EV 노트 <span class="tag">비공식</span></a>
         <div class="chrome-meta">
@@ -24,31 +24,45 @@
         </nav>
       </div>
     </header>
-    <main id="content">
-      <header class="page-head">
+    <main id="content" class="main-flush">
+      <header class="page-head page-head-tight story-inner reveal">
         <h1>액세서리</h1>
-        <p>정품(BMW 오리지널)과 서드파티를 구분해 모았어요. 세대가 다른 차는 빼 두었어요. <span data-count></span></p>
+        <p>카드를 넘겨 고르고, 링크는 펼쳐 보세요. <span data-count></span></p>
+        <p class="muted" data-source-note></p>
       </header>
-      <p class="muted" data-source-note></p>
-      <div class="filters">
-        <div class="filter-row" data-filter-origin></div>
-        <div class="filter-row" data-filter-category></div>
-        <div class="filter-row" data-filter-market></div>
+      <div class="story-inner filters-sticky">
+        <div class="filters">
+          <div class="filters-scroll"><div class="filter-row" data-filter-origin></div></div>
+          <div class="filters-scroll"><div class="filter-row" data-filter-category></div></div>
+          <div class="filters-scroll"><div class="filter-row" data-filter-market></div></div>
+        </div>
       </div>
-      <div class="list" data-cards></div>
-      <section class="section" style="margin-top: 0.85rem">
-                <h2>고르기 전에 한 번만 더</h2>
-        <ul class="muted note-list">
-          <li>정품은 딜러·공식 경로로, 서드파티는 맞는 차종인지·보증·장착을 판매처와 장착점에서 확인해 주세요.</li>
-          <li>국내에 아직 없거나 딜러 주문만 되는 경우도 있어요. 공임·관세는 가격에 안 넣었어요.</li>
-          <li>장착할 때는 VIN·옵션 코드로 한 번 더 맞춰 보세요.</li>
-          <li>해외가의 추정 원화는 송금·카드로 나가는 금액이 아니에요. 한국 KRW는 그날 표시가 기준이에요.</li>
-          <li>사진은 올리지 않아요. 실물은 판매·공식 페이지에서 확인해 주세요.</li>
-        </ul>
-        <p class="muted" data-fx></p>
+      <section class="story reveal" style="padding-top:0">
+        <div class="list-rail" data-cards></div>
+      </section>
+      <section class="story story-muted reveal">
+        <div class="story-inner">
+          <p class="story-kicker">참고</p>
+          <h2 class="story-title">고르기 전에</h2>
+        </div>
+        <div class="panel">
+          <details class="expand" open>
+            <summary>한 번만 더 확인할 것</summary>
+            <div class="expand-body">
+              <ul class="muted note-list">
+                <li>정품은 딜러·공식 경로로, 서드파티는 맞는 차종인지·보증·장착을 판매처와 장착점에서 확인해 주세요.</li>
+                <li>국내에 아직 없거나 딜러 주문만 되는 경우도 있어요. 공임·관세는 가격에 안 넣었어요.</li>
+                <li>장착할 때는 VIN·옵션 코드로 한 번 더 맞춰 보세요.</li>
+                <li>해외가의 추정 원화는 송금·카드로 나가는 금액이 아니에요. 한국 KRW는 그날 표시가 기준이에요.</li>
+                <li>사진은 올리지 않아요. 실물은 판매·공식 페이지에서 확인해 주세요.</li>
+              </ul>
+              <p class="muted" data-fx></p>
+            </div>
+          </details>
+        </div>
       </section>
     </main>
     <footer class="site-footer">자세한 스펙·가격은 각 판매·공식 페이지를 봐 주세요.</footer>
-    <script type="module" src="js/render-accessories.js?v=20260911g"></script>
+    <script type="module" src="js/render-accessories.js?v=20260912ux"></script>
   </body>
 </html>

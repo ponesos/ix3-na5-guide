@@ -11,7 +11,7 @@
   </head>
   <body>
     <p class="notice">BMW AG·BMW 그룹 코리아와는 무관한 비공식 안내 사이트예요. 짧은 요약만 두고, 자세한 내용은 영상에서 확인해 주세요.</p>
-        <header class="chrome">
+    <header class="chrome">
       <div class="chrome-inner">
         <a class="brand" href="index.html">글로벌 EV 노트 <span class="tag">비공식</span></a>
         <div class="chrome-meta">
@@ -23,16 +23,18 @@
         </nav>
       </div>
     </header>
-    <main id="content">
-      <header class="page-head">
+    <main id="content" class="main-flush">
+      <header class="page-head page-head-tight story-inner reveal">
         <h1>시승기</h1>
-        <p>THE NEW iX3(NA5) 시승·리뷰 영상이에요. 최근 올라온 순으로 보여 드려요. <span data-count></span></p>
+        <p>옆으로 넘겨 최근 영상을 고르세요. <span data-count></span></p>
+        <div data-channels></div>
+        <p class="muted" data-source-note></p>
       </header>
-      <div data-channels></div>
-      <p class="muted" data-source-note></p>
-      <div class="list" data-cards></div>
+      <section class="story reveal" style="padding-top:0">
+        <div class="list-rail list-rail-grid" data-cards></div>
+      </section>
     </main>
     <footer class="site-footer">시승 신청은 BMW 코리아 공식 페이지에서 해 주세요.</footer>
-    <script type="module" src="js/render-reviews.js?v=20260911g"></script>
+    <script type="module" src="js/render-reviews.js?v=20260912ux"></script>
   </body>
 </html>

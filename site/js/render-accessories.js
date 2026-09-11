@@ -8,6 +8,7 @@ import {
   loadSiteContext,
   bindChrome,
 } from "./app.js";
+import { initUx, initReveal } from "./ux.js";
 
 const ORIGIN_KO = {
   oem: "정품",
@@ -114,12 +115,12 @@ function renderCards() {
   const count = document.querySelector("[data-count]");
   if (count) count.textContent = `${list.length}개`;
   if (!list.length) {
-    root.innerHTML = `<p class="empty">조건에 맞는 액세서리가 없어요. 필터를 조금 풀어 볼까요?</p>`;
+    root.innerHTML = `<p class="empty" style="margin:0 var(--pad)">조건에 맞는 액세서리가 없어요. 필터를 조금 풀어 볼까요?</p>`;
     return;
   }
 
-  root.innerHTML = list
-    .map((item, idx) => {
+  root.innerHTML = `<div class="rail" aria-label="액세서리"><div class="rail-track">${list
+    .map((item) => {
       const origin = item.origin || "oem";
       const chips = [
         `<span class="chip ${origin === "oem" ? "chip-on" : ""}">${ORIGIN_KO[origin] || origin}</span>`,
@@ -132,39 +133,23 @@ function renderCards() {
       const primary = item.markets[0];
       const est = primary ? estimateKrw(primary.price, primary.currency, state.fx) : null;
       const isKrw = primary?.currency === "KRW";
-      const priceBlock = primary
-        ? `<p class="price">
-            <span class="price-krw">${
-              est == null
-                ? formatMoney(primary.price, primary.currency)
-                : isKrw
-                  ? formatMoney(primary.price, "KRW")
-                  : `약 ${formatKrw(est)}`
-            }</span>
-            ${
-              isKrw
-                ? `<span class="price-local">${marketLabel(primary.country)}${
-                    primary.channelKo ? ` · ${primary.channelKo}` : ""
-                  }</span>`
-                : `<span class="price-local">${marketLabel(primary.country)} ${formatMoney(
-                    primary.price,
-                    primary.currency
-                  )}${
-                    typeof primary.listPrice === "number"
-                      ? ` · 정가 ${formatMoney(primary.listPrice, primary.currency)}`
-                      : ""
-                  }</span>`
-            }
-            <span class="muted">${isKrw ? "표시가" : "추정 환율"} · ${primary.asOf}${
-              primary.promoUntil ? ` · 프로모 ~${primary.promoUntil}` : ""
-            }</span>
-            ${
-              primary.priceNoteKo
-                ? `<span class="muted">${primary.priceNoteKo}</span>`
-                : ""
-            }
-          </p>`
-        : "";
+      const priceLabel = primary
+        ? est == null
+          ? formatMoney(primary.price, primary.currency)
+          : isKrw
+            ? formatMoney(primary.price, "KRW")
+            : `약 ${formatKrw(est)}`
+        : "—";
+
+      const partRow = item.oemPartNumber
+        ? `<div class="part-row">
+            <span>부품번호</span>
+            <span class="part">${item.oemPartNumber}</span>
+            <button type="button" class="btn-copy" data-copy="${item.oemPartNumber}">복사</button>
+          </div>`
+        : item.brandKo
+          ? `<p class="orig">브랜드 · ${item.brandKo}${item.sellerSku ? ` · ${item.sellerSku}` : ""}</p>`
+          : "";
 
       const links = item.markets
         .map(
@@ -187,41 +172,33 @@ function renderCards() {
               .join("")
           : "";
 
-      const partRow = item.oemPartNumber
-        ? `<div class="part-row">
-            <span>부품번호</span>
-            <span class="part">${item.oemPartNumber}</span>
-            <button type="button" class="btn-copy" data-copy="${item.oemPartNumber}">복사</button>
-          </div>`
-        : item.brandKo
-          ? `<p class="orig">브랜드 · ${item.brandKo}${item.sellerSku ? ` · ${item.sellerSku}` : ""}</p>`
-          : "";
-
       const notes = item.fitmentNotes ? `<p class="muted">${item.fitmentNotes}</p>` : "";
       const disc = item.disclaimer ? `<p class="muted">${item.disclaimer}</p>` : "";
-      const origLine =
-        origin === "thirdParty" && item.brandKo
-          ? `<p class="orig">${item.brandKo}${item.titleOriginal && item.titleOriginal !== item.titleKo ? ` · ${item.titleOriginal}` : ""}</p>`
-          : `<p class="orig">${item.titleOriginal}</p>`;
+      const priceNote = primary
+        ? `<p class="muted">${isKrw ? "표시가" : "추정 환율"} · ${primary.asOf}${
+            primary.promoUntil ? ` · 프로모 ~${primary.promoUntil}` : ""
+          }${primary.priceNoteKo ? ` · ${primary.priceNoteKo}` : ""}</p>`
+        : "";
 
-      return `<article class="item item-acc" style="animation-delay:${Math.min(idx, 8) * 0.04}s">
-        <div class="item-body">
-          <div class="chips">${chips}</div>
-          <h2>${item.titleKo}</h2>
-          ${origLine}
-          ${partRow}
-          <p class="summary">${item.summaryKo}</p>
-          ${notes}
-          ${disc}
-          ${extraMarkets}
-        </div>
-        <div class="item-side">
-          ${priceBlock}
-          ${links}
-        </div>
+      return `<article class="rail-card rail-card-wide">
+        <div class="chips">${chips}</div>
+        <strong class="rail-card-title">${item.titleKo}</strong>
+        <p class="rail-card-price">${priceLabel}</p>
+        <p class="rail-card-meta">${item.summaryKo}</p>
+        ${partRow}
+        <details class="expand">
+          <summary>가격 · 링크</summary>
+          <div class="expand-body">
+            ${priceNote}
+            ${notes}
+            ${disc}
+            ${extraMarkets}
+            <div class="actions" style="margin-top:0.65rem">${links}</div>
+          </div>
+        </details>
       </article>`;
     })
-    .join("");
+    .join("")}</div></div>`;
 
   root.querySelectorAll("[data-copy]").forEach((btn) => {
     btn.addEventListener("click", async () => {
@@ -237,6 +214,7 @@ function renderCards() {
       }
     });
   });
+  initReveal();
 }
 
 async function main() {
@@ -244,6 +222,7 @@ async function main() {
   try {
     const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
     bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+    initUx({ vehicleId });
     const accessories = await tryLoadJson(`data/vehicles/${vehicleId}/accessories.json`);
     state.fx = meta.fx;
     state.items = accessories?.items || [];

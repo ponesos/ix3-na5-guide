@@ -12,7 +12,7 @@
   <body>
     <a class="skip" href="#content">본문으로</a>
     <p class="notice">BMW AG·BMW 그룹 코리아와는 무관한 비공식 안내 사이트예요. 오너들이 자주 묻는 내용을 정리한 FAQ이며, 공식 안내를 대신하지는 않아요.</p>
-        <header class="chrome">
+    <header class="chrome">
       <div class="chrome-inner">
         <a class="brand" href="index.html">글로벌 EV 노트 <span class="tag">비공식</span></a>
         <div class="chrome-meta">
@@ -24,22 +24,31 @@
         </nav>
       </div>
     </header>
-    <main id="content">
-      <header class="page-head">
+    <main id="content" class="main-flush">
+      <header class="page-head page-head-tight story-inner reveal">
         <h1>FAQ</h1>
-        <p>출고·보조금·트림·충전, 궁금한 점만 빠르게 찾아보세요. <span data-count></span></p>
+        <p>궁금한 카드만 펼쳐 보세요. <span data-count></span></p>
       </header>
-      <section class="section">
-        <h2>한눈에</h2>
-        <div data-highlights></div>
-        <p class="muted" data-source-note></p>
+      <section class="story reveal" data-highlights-story>
+        <div class="story-inner">
+          <p class="story-kicker">한눈에</p>
+          <h2 class="story-title">자주 보는 포인트</h2>
+          <p class="story-lead" data-source-note></p>
+        </div>
+        <div class="rail" aria-label="하이라이트">
+          <div class="rail-track" data-highlights></div>
+        </div>
       </section>
-      <div class="filters">
-        <div class="filter-row" data-filter-category></div>
+      <div class="story-inner filters-sticky">
+        <div class="filters filters-scroll">
+          <div class="filter-row" data-filter-category></div>
+        </div>
       </div>
-      <div class="list list-faq" data-cards></div>
+      <section class="story reveal" style="padding-top:0">
+        <div class="list-rail list-rail-grid" data-cards></div>
+      </section>
     </main>
     <footer class="site-footer">닉네임·대화 원문은 공개하지 않아요. 계약·보조금은 딜러와 관공서에서 한 번 더 확인해 주세요.</footer>
-    <script type="module" src="js/render-tips.js?v=20260911g"></script>
+    <script type="module" src="js/render-tips.js?v=20260912ux"></script>
   </body>
 </html>

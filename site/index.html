@@ -31,13 +31,31 @@
         <p class="hero-lead" data-hero-lead></p>
       </div>
     </section>
-    <main id="content">
-      <dl class="stats" data-stats></dl>
-      <section class="section" data-trims></section>
-      <section class="section" data-specs></section>
-      <section class="section" data-sources></section>
+    <main id="content" class="main-flush" data-model-root>
+      <section class="story reveal" data-stats-story>
+        <div class="story-inner">
+          <p class="story-kicker">한눈에</p>
+          <h2 class="story-title">핵심 숫자</h2>
+          <p class="story-lead">옆으로 넘겨 가격·거리·가속을 보세요.</p>
+        </div>
+        <div class="rail" aria-label="핵심 숫자">
+          <div class="rail-track" data-stats></div>
+        </div>
+      </section>
+      <section class="story story-muted reveal" data-trims></section>
+      <section class="story reveal">
+        <div class="story-inner">
+          <p class="story-kicker">세부</p>
+          <h2 class="story-title">제원 · 출처</h2>
+          <p class="story-lead">필요할 때만 펼쳐 보세요.</p>
+        </div>
+        <div class="panel">
+          <div data-specs></div>
+          <div data-sources></div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">가격·주행 가능 거리는 출처 기준일 기준이에요. 액세서리 원화는 환율 스냅샷으로 짐작한 값이에요.</footer>
-    <script type="module" src="js/render-model.js?v=20260911g"></script>
+    <script type="module" src="js/render-model.js?v=20260912ux"></script>
   </body>
 </html>

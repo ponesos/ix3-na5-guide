@@ -1,4 +1,5 @@
 import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
+import { initUx, initReveal } from "./ux.js";
 
 const CATEGORY_KO = {
   purchase: "구매·보조금",
@@ -57,27 +58,28 @@ function renderCards() {
   const count = document.querySelector("[data-count]");
   if (count) count.textContent = `${list.length}개`;
   if (!list.length) {
-    root.innerHTML = `<p class="empty">이 분류에는 아직 질문이 없어요.</p>`;
+    root.innerHTML = `<p class="empty" style="margin:0 var(--pad)">이 분류에는 아직 질문이 없어요.</p>`;
     return;
   }
-  root.innerHTML = list
+  root.innerHTML = `<div class="rail" aria-label="FAQ"><div class="rail-track">${list
     .map((item) => {
-      const caveat = item.caveatKo
-        ? `<p class="muted">${item.caveatKo}</p>`
-        : "";
-      const tags = (item.tags || [])
-        .map((t) => `<span class="chip">${t}</span>`)
-        .join("");
-      return `<article class="item">
+      const caveat = item.caveatKo ? `<p class="muted">${item.caveatKo}</p>` : "";
+      const tags = (item.tags || []).map((t) => `<span class="chip">${t}</span>`).join("");
+      return `<article class="rail-card rail-card-wide faq-card">
         <div class="chips"><span class="chip chip-on">${CATEGORY_KO[item.category] || item.category}</span>${tags}</div>
-        <h2>${item.titleKo}</h2>
-        <p class="tip-q"><strong>Q.</strong> ${item.questionKo}</p>
-        <p class="tip-a"><strong>A.</strong> ${item.answerKo}</p>
-        ${caveat}
-        ${evidenceLine(item)}
+        <details class="expand">
+          <summary>${item.titleKo}</summary>
+          <div class="expand-body">
+            <p class="tip-q"><strong>Q.</strong> ${item.questionKo}</p>
+            <p class="tip-a"><strong>A.</strong> ${item.answerKo}</p>
+            ${caveat}
+            ${evidenceLine(item)}
+          </div>
+        </details>
       </article>`;
     })
-    .join("");
+    .join("")}</div></div>`;
+  initReveal();
 }
 
 async function main() {
@@ -85,16 +87,24 @@ async function main() {
   try {
     const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
     bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+    initUx({ vehicleId });
     const tips = await tryLoadJson(`data/vehicles/${vehicleId}/tips.json`);
     state.items = tips?.items || [];
     const note = document.querySelector("[data-source-note]");
-    if (note) note.textContent = tips?.sourceNoteKo || "";
+    if (note) note.textContent = tips?.sourceNoteKo || "옆으로 넘겨 핵심만 훑어 보세요.";
     const hl = document.querySelector("[data-highlights]");
     if (hl) {
       hl.innerHTML = tips?.highlights?.length
-        ? `<ul>${tips.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>`
+        ? tips.highlights
+            .map(
+              (h, i) =>
+                `<article class="rail-card"><span class="rail-card-kicker">포인트 ${i + 1}</span><p class="rail-card-meta" style="margin:0;color:var(--ink);font-size:0.98rem;line-height:1.45">${h}</p></article>`
+            )
+            .join("")
         : "";
     }
+    const hlStory = document.querySelector("[data-highlights-story]");
+    if (hlStory && !tips?.highlights?.length) hlStory.hidden = true;
     renderFilters();
     renderCards();
   } catch (err) {

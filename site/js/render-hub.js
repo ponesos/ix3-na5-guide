@@ -1,4 +1,5 @@
 import { loadJson, showError, bindChrome, vehicleHref } from "./app.js";
+import { initUx, initReveal } from "./ux.js";
 
 function renderCards(items) {
   const root = document.querySelector("[data-vehicles]");
@@ -10,21 +11,22 @@ function renderCards(items) {
     return;
   }
   root.innerHTML = list
-    .map((v, idx) => {
+    .map((v) => {
       const code = v.codeName ? `<span class="chip chip-on">${v.codeName}</span>` : "";
       const status =
         v.status === "placeholder"
           ? `<span class="chip">준비 중</span>`
-          : `<span class="chip">보기</span>`;
+          : `<span class="chip chip-on">바로 보기</span>`;
       const href = vehicleHref("index.html", v.id);
-      return `<article class="vehicle-card" style="animation-delay:${Math.min(idx, 8) * 0.04}s">
+      return `<a class="rail-card rail-card-wide rail-card-link" href="${href}">
         <div class="chips">${code}${status}</div>
-        <h2>${v.displayNameKo}</h2>
-        ${v.blurbKo ? `<p class="summary">${v.blurbKo}</p>` : ""}
-        <p><a class="btn" href="${href}">이 차 보기</a></p>
-      </article>`;
+        <strong class="rail-card-title">${v.displayNameKo}</strong>
+        ${v.blurbKo ? `<span class="rail-card-meta">${v.blurbKo}</span>` : ""}
+        <span class="btn" style="align-self:flex-start;margin-top:auto;pointer-events:none">이 차 보기</span>
+      </a>`;
     })
     .join("");
+  initReveal();
 }
 
 async function main() {
@@ -35,8 +37,12 @@ async function main() {
       loadJson("data/vehicles.json"),
     ]);
     bindChrome({ meta, catalog, isHub: true, pageTitle: meta.siteName });
+    initUx({ isHub: true });
     const lead = document.querySelector("[data-tagline]");
-    if (lead) lead.textContent = meta.tagline || "";
+    if (lead) {
+      const countBit = `<span data-count></span>`;
+      lead.innerHTML = `${meta.tagline || "보고 싶은 차를 골라 주세요."} ${countBit}`;
+    }
     renderCards(catalog.items);
   } catch (err) {
     showError(mainEl, err);

@@ -11,7 +11,7 @@
   </head>
   <body>
     <p class="notice">BMW AG·BMW 그룹 코리아와는 무관한 비공식 안내 사이트예요. 기사 전문 대신 짧은 요약과 원문 링크만 모아 두었어요.</p>
-        <header class="chrome">
+    <header class="chrome">
       <div class="chrome-inner">
         <a class="brand" href="index.html">글로벌 EV 노트 <span class="tag">비공식</span></a>
         <div class="chrome-meta">
@@ -23,15 +23,17 @@
         </nav>
       </div>
     </header>
-    <main id="content">
-      <header class="page-head">
+    <main id="content" class="main-flush">
+      <header class="page-head page-head-tight story-inner reveal">
         <h1>뉴스</h1>
-        <p>2026년 8월 이후 THE NEW iX3·노이어 클라쎄 소식을 골랐어요. 최근 기사부터 볼 수 있어요. <span data-count></span></p>
+        <p>최근 보도부터 카드로 훑어 보세요. <span data-count></span></p>
+        <p class="muted" data-source-note></p>
       </header>
-      <p class="muted" data-source-note></p>
-      <div class="list" data-cards></div>
+      <section class="story reveal" style="padding-top:0">
+        <div class="list-rail list-rail-grid" data-cards></div>
+      </section>
     </main>
     <footer class="site-footer">요약은 참고용이에요. 정확한 내용은 원문에서 확인해 주세요.</footer>
-    <script type="module" src="js/render-news.js?v=20260911g"></script>
+    <script type="module" src="js/render-news.js?v=20260912ux"></script>
   </body>
 </html>

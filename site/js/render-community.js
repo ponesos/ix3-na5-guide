@@ -1,4 +1,5 @@
 import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
+import { initUx, initReveal } from "./ux.js";
 
 const state = { items: [], sort: "latest", source: null };
 
@@ -38,27 +39,28 @@ function renderCards() {
   const list = sorted(state.items);
   if (count) count.textContent = `${list.length}개`;
   if (!list.length) {
-    root.innerHTML = `<p class="empty">아직 올린 글이 없어요.</p>`;
+    root.innerHTML = `<p class="empty" style="margin:0 var(--pad)">아직 올린 글이 없어요.</p>`;
     return;
   }
-  root.innerHTML = list
-    .map((item, idx) => {
+  root.innerHTML = `<div class="rail" aria-label="커뮤니티"><div class="rail-track">${list
+    .map((item) => {
       const pin = item.pinned ? `<span class="chip">고정</span>` : "";
       const orig = item.titleOriginal || "";
       const primaryLabel = isBoardOnly(item.url) ? "게시판 열기" : "이야기 보러 가기";
       const linkBlock = item.url
         ? `<p class="actions"><a class="btn" href="${item.url}" target="_blank" rel="noopener noreferrer">${primaryLabel}</a></p>`
         : `<p class="muted">링크가 아직 없어요</p>`;
-      return `<article class="item" style="animation-delay:${Math.min(idx, 8) * 0.04}s">
+      return `<article class="rail-card rail-card-wide">
         <div class="chips">${pin}<span class="chip chip-on">해외</span><span class="chip">DE</span></div>
-        <h2>${item.titleKo}</h2>
+        <strong class="rail-card-title">${item.titleKo}</strong>
         ${orig ? `<p class="orig">${orig}</p>` : ""}
-        <p class="summary">${item.summaryKo}</p>
-        <p class="muted">${formatMeta(item)}</p>
+        <p class="rail-card-meta">${formatMeta(item)}</p>
+        <p class="summary" style="flex:1">${item.summaryKo}</p>
         ${linkBlock}
       </article>`;
     })
-    .join("");
+    .join("")}</div></div>`;
+  initReveal();
 }
 
 function bindSort() {
@@ -79,6 +81,7 @@ async function main() {
   try {
     const { meta, catalog, vehicleId, vehicle } = await loadSiteContext();
     bindChrome({ meta, catalog, vehicleId, pageTitle: vehicle?.displayNameKo });
+    initUx({ vehicleId });
     const forum = await tryLoadJson(`data/vehicles/${vehicleId}/forum.json`);
     state.source = forum;
     state.items = forum?.items || [];
