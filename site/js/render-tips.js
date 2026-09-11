@@ -1,5 +1,5 @@
 import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
-import { initUx, initReveal } from "./ux.js";
+import { initUx, initReveal, resetRails } from "./ux.js";
 
 const CATEGORY_KO = {
   purchase: "구매·보조금",
@@ -80,6 +80,7 @@ function renderCards() {
     })
     .join("")}</div></div>`;
   initReveal();
+  resetRails();
 }
 
 async function main() {

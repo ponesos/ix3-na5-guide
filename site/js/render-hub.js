@@ -1,5 +1,5 @@
 import { loadJson, showError, bindChrome, vehicleHref } from "./app.js";
-import { initUx, initReveal } from "./ux.js";
+import { initUx, initReveal, resetRails } from "./ux.js";
 
 function renderCards(items) {
   const root = document.querySelector("[data-vehicles]");
@@ -27,6 +27,7 @@ function renderCards(items) {
     })
     .join("");
   initReveal();
+  resetRails();
 }
 
 async function main() {

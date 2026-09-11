@@ -93,10 +93,24 @@ export function initReveal() {
 }
 
 /**
+ * Snap + padding can leave rails slightly scrolled; pin to start.
+ */
+export function resetRails() {
+  document.querySelectorAll(".rail").forEach((rail) => {
+    rail.scrollLeft = 0;
+  });
+}
+
+/**
  * Call after chrome bind (and again after dynamic list re-renders if needed).
  * @param {{ vehicleId?: string, isHub?: boolean }} opts
  */
 export function initUx(opts = {}) {
   mountExploreRail(opts);
   initReveal();
+  resetRails();
+  requestAnimationFrame(() => {
+    resetRails();
+    requestAnimationFrame(resetRails);
+  });
 }

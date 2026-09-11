@@ -1,5 +1,5 @@
 import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
-import { initUx, initReveal } from "./ux.js";
+import { initUx, initReveal, resetRails } from "./ux.js";
 
 const state = { items: [], sort: "latest", source: null };
 
@@ -61,6 +61,7 @@ function renderCards() {
     })
     .join("")}</div></div>`;
   initReveal();
+  resetRails();
 }
 
 function bindSort() {

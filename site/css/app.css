@@ -15,9 +15,12 @@
   --ok-bg: #eef3f8;
   --radius: 8px;
   --font: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-  --pad: clamp(1.1rem, 3.5vw, 1.75rem);
-  --max: 70rem;
+  --pad: max(1.25rem, env(safe-area-inset-left, 0px));
+  --pad-right: max(1.25rem, env(safe-area-inset-right, 0px));
+  --max: 100%;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --card-w: calc(100vw - var(--pad) - var(--pad-right) - 2.5rem);
+  --chrome-sticky: 5.5rem;
 }
 
 *,
@@ -65,9 +68,9 @@ a:hover {
 .notice {
   background: var(--ok-bg);
   color: var(--ink-soft);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   text-align: center;
-  padding: 0.55rem var(--pad);
+  padding: 0.5rem var(--pad-right) 0.5rem var(--pad);
   border-bottom: 1px solid var(--line);
 }
 
@@ -81,14 +84,14 @@ a:hover {
 }
 
 .chrome-inner {
-  width: min(var(--max), calc(100% - 2 * var(--pad)));
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.65rem 1.25rem;
-  padding: 0.85rem 0 0.55rem;
+  gap: 0.5rem 0.85rem;
+  padding: 0.75rem var(--pad-right) 0.45rem var(--pad);
 }
 
 .brand {
@@ -167,18 +170,6 @@ a:hover {
   padding: 0 0 1.5rem;
 }
 
-@media (min-width: 640px) {
-  .vehicle-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 960px) {
-  .vehicle-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .vehicle-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -243,12 +234,12 @@ a:hover {
     radial-gradient(700px 360px at 0% 100%, rgba(255, 255, 255, 0.06), transparent 50%),
     var(--hero);
   color: #fff;
-  padding: clamp(2.75rem, 9vw, 4.5rem) var(--pad) clamp(2.5rem, 8vw, 4rem);
+  padding: clamp(2.5rem, 10vw, 3.5rem) var(--pad-right) clamp(2.25rem, 8vw, 3.25rem) var(--pad);
   animation: rise 0.6s var(--ease) both;
 }
 
 .hero-inner {
-  width: min(var(--max), 100%);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -284,8 +275,10 @@ a:hover {
 }
 
 main {
-  width: min(var(--max), calc(100% - 2 * var(--pad)));
+  width: calc(100% - var(--pad) - var(--pad-right));
   margin: -1.25rem auto 2rem;
+  margin-left: var(--pad);
+  margin-right: var(--pad-right);
   position: relative;
   z-index: 1;
 }
@@ -293,7 +286,7 @@ main {
 main.main-flush {
   width: 100%;
   max-width: none;
-  margin: 0 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -303,12 +296,6 @@ main.main-flush {
   gap: 0.65rem;
   margin: 0 0 1.25rem;
   animation: rise 0.65s var(--ease) 0.05s both;
-}
-
-@media (min-width: 760px) {
-  .stats {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .stat {
@@ -487,12 +474,6 @@ tbody th {
   gap: 0.7rem;
 }
 
-@media (min-width: 880px) {
-  .list-faq {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .item {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -504,13 +485,6 @@ tbody th {
 .item-acc {
   display: grid;
   gap: 1rem;
-}
-
-@media (min-width: 740px) {
-  .item-acc {
-    grid-template-columns: 1fr minmax(11rem, 14rem);
-    gap: 1.25rem;
-  }
 }
 
 .item h2 {
@@ -617,15 +591,6 @@ tbody th {
   gap: 0.55rem;
 }
 
-@media (min-width: 740px) {
-  .item-side {
-    align-items: flex-end;
-    text-align: right;
-    border-left: 1px solid var(--line);
-    padding-left: 1.1rem;
-  }
-}
-
 .price {
   margin: 0;
 }
@@ -704,8 +669,8 @@ tbody th {
 }
 
 .site-footer {
-  width: min(var(--max), calc(100% - 2 * var(--pad)));
-  margin: 0 auto 2.5rem;
+  width: calc(100% - var(--pad) - var(--pad-right));
+  margin: 0 var(--pad-right) calc(2.5rem + env(safe-area-inset-bottom, 0px)) var(--pad);
   padding-top: 1rem;
   border-top: 1px solid var(--line);
   font-size: 0.78rem;
@@ -732,10 +697,10 @@ tbody th {
   }
 }
 
-/* —— Story + snap rail (mobile-first explore UX) —— */
+/* —— Story + snap rail (mobile-only) —— */
 
 .story {
-  padding: clamp(2rem, 7vw, 3.25rem) 0 clamp(1.75rem, 5vw, 2.75rem);
+  padding: 2rem 0 1.65rem;
   animation: rise 0.55s var(--ease) both;
 }
 
@@ -749,13 +714,13 @@ tbody th {
 }
 
 .story-inner {
-  width: min(var(--max), calc(100% - 2 * var(--pad)));
-  margin: 0 auto 1.15rem;
+  width: calc(100% - var(--pad) - var(--pad-right));
+  margin: 0 var(--pad-right) 1.05rem var(--pad);
 }
 
 .story-kicker {
-  margin: 0 0 0.55rem;
-  font-size: 0.75rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -767,8 +732,8 @@ tbody th {
 }
 
 .story-title {
-  margin: 0 0 0.55rem;
-  font-size: clamp(1.65rem, 5.5vw, 2.35rem);
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.7rem, 7vw, 2.2rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.15;
@@ -776,8 +741,8 @@ tbody th {
 
 .story-lead {
   margin: 0;
-  max-width: 28rem;
-  font-size: 1.02rem;
+  max-width: 22rem;
+  font-size: 1rem;
   color: var(--muted);
   line-height: 1.5;
 }
@@ -787,8 +752,8 @@ tbody th {
 }
 
 .story-explore {
-  margin-top: 0.5rem;
-  padding-bottom: 2.5rem;
+  margin-top: 0.35rem;
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
 }
 
 .rail {
@@ -797,8 +762,12 @@ tbody th {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
-  touch-action: pan-x;
+  /* pan-x only blocked vertical page scroll on cards — allow both axes */
+  touch-action: pan-x pan-y;
   scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--pad) var(--pad-right);
+  /* room so card shadow / border isn’t clipped */
+  padding-block: 0.4rem;
 }
 
 .rail::-webkit-scrollbar {
@@ -807,53 +776,60 @@ tbody th {
 
 .rail-track {
   display: flex;
-  gap: 0.75rem;
-  padding: 0.15rem var(--pad) 0.85rem;
+  gap: 0.7rem;
   width: max-content;
+  padding-block: 0.1rem 0.55rem;
+  padding-inline: var(--pad) var(--pad-right);
 }
+
+/* no ::before/::after — padding + scroll-padding keeps edges visible */
 
 .rail-card {
   scroll-snap-align: start;
-  flex: 0 0 min(82vw, 19.5rem);
+  scroll-snap-stop: always;
+  flex: 0 0 var(--card-w);
+  max-width: 22rem;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 1.2rem 1.15rem 1.25rem;
-  box-shadow: 0 10px 28px rgba(14, 17, 22, 0.04);
+  padding: 1.15rem 1.1rem 1.2rem;
+  box-shadow: 0 8px 24px rgba(14, 17, 22, 0.05);
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  min-height: 10.5rem;
+  gap: 0.4rem;
+  min-height: 10.25rem;
+  box-sizing: border-box;
 }
 
 .rail-card-wide {
-  flex-basis: min(88vw, 22rem);
-  min-height: 12rem;
+  flex-basis: var(--card-w);
+  min-height: 11.5rem;
 }
 
 .rail-card-stat {
-  min-height: 7.5rem;
+  min-height: 7.25rem;
   justify-content: flex-end;
 }
 
 .rail-card-stat dt {
   margin: 0;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   color: var(--muted);
 }
 
 .rail-card-stat dd {
   margin: 0.35rem 0 0;
-  font-size: clamp(1.35rem, 4.5vw, 1.7rem);
+  font-size: clamp(1.3rem, 5.5vw, 1.6rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.2;
   color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
 .rail-card-kicker {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--muted);
@@ -861,7 +837,7 @@ tbody th {
 }
 
 .rail-card-title {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.25;
@@ -869,10 +845,11 @@ tbody th {
 }
 
 .rail-card-price {
-  font-size: 1.35rem;
+  font-size: 1.28rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--ink);
+  overflow-wrap: anywhere;
 }
 
 .rail-card-meta {
@@ -884,13 +861,10 @@ tbody th {
 .rail-card-link {
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 
-.rail-card-link:hover {
+.rail-card-link:active {
   border-color: var(--line-strong);
-  color: inherit;
-  transform: translateY(-2px);
 }
 
 .story-dark .rail-card {
@@ -911,29 +885,13 @@ tbody th {
   color: var(--hero-muted);
 }
 
-@media (min-width: 760px) {
-  .rail-card {
-    flex-basis: min(42vw, 17.5rem);
-  }
-
-  .rail-card-wide {
-    flex-basis: min(46vw, 20rem);
-  }
-}
-
-@media (min-width: 1100px) {
-  .rail-card {
-    flex-basis: 16.5rem;
-  }
-}
-
 .panel {
-  width: min(var(--max), calc(100% - 2 * var(--pad)));
-  margin: 0 auto 1rem;
+  width: calc(100% - var(--pad) - var(--pad-right));
+  margin: 0 var(--pad-right) 1rem var(--pad);
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  padding: 0.35rem 1.1rem 0.55rem;
+  padding: 0.35rem 1rem 0.55rem;
 }
 
 .expand {
@@ -952,11 +910,12 @@ tbody th {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.95rem 0;
-  font-size: 1.05rem;
+  padding: 0.9rem 0;
+  font-size: 1.02rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
+  min-height: 2.75rem;
 }
 
 .expand > summary::-webkit-details-marker {
@@ -981,7 +940,7 @@ tbody th {
 .expand-body {
   padding: 0 0 1rem;
   color: var(--ink-soft);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   line-height: 1.55;
 }
 
@@ -994,7 +953,7 @@ tbody th {
 }
 
 .faq-card .expand > summary {
-  font-size: 1.08rem;
+  font-size: 1.05rem;
 }
 
 .faq-card .tip-q {
@@ -1009,17 +968,24 @@ tbody th {
 
 .filters-sticky {
   position: sticky;
-  top: 3.6rem;
+  top: var(--chrome-sticky);
   z-index: 12;
-  background: rgba(244, 245, 247, 0.94);
+  background: rgba(244, 245, 247, 0.96);
   backdrop-filter: blur(12px);
-  padding: 0.55rem 0 0.65rem;
-  margin: 0 0 0.85rem;
-  border-bottom: 1px solid transparent;
+  padding: 0.5rem var(--pad-right) 0.55rem var(--pad);
+  margin: 0 0 0.65rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .filters-sticky .filters {
   margin-bottom: 0;
+}
+
+.filters-sticky.story-inner {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
 .filters-scroll {
@@ -1036,49 +1002,22 @@ tbody th {
 .filter-row.filters-scroll {
   flex-wrap: nowrap;
   width: max-content;
-  padding-right: 0.5rem;
+  padding-right: 0.35rem;
 }
 
 .list-rail {
   display: block;
-  margin: 0 calc(-1 * var(--pad));
-  width: calc(100% + 2 * var(--pad));
-}
-
-.list-rail .rail-track {
-  padding-left: var(--pad);
-  padding-right: var(--pad);
-}
-
-@media (min-width: 880px) {
-  .list-rail.list-rail-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.85rem;
-    margin: 0;
-    width: 100%;
-  }
-
-  .list-rail.list-rail-grid .rail,
-  .list-rail.list-rail-grid .rail-track {
-    display: contents;
-  }
-
-  .list-rail.list-rail-grid .rail-card {
-    flex: none;
-    min-height: 0;
-    height: 100%;
-  }
+  width: 100%;
+  margin: 0;
 }
 
 .hub-rail .rail-card-wide {
-  flex-basis: min(90vw, 24rem);
-  min-height: 14rem;
+  min-height: 13.5rem;
   justify-content: space-between;
 }
 
 .hub-rail .rail-card-title {
-  font-size: clamp(1.45rem, 5vw, 1.85rem);
+  font-size: clamp(1.4rem, 6vw, 1.75rem);
 }
 
 .chip-rail {
@@ -1088,6 +1027,7 @@ tbody th {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding: 0.25rem 0 0.5rem;
+  scroll-padding-inline: 0;
 }
 
 .chip-rail::-webkit-scrollbar {
@@ -1097,24 +1037,28 @@ tbody th {
 .chip-rail .chip {
   flex: 0 0 auto;
   font-size: 0.82rem;
-  padding: 0.4rem 0.7rem;
+  padding: 0.45rem 0.75rem;
   border-radius: 999px;
 }
 
 .page-head-tight {
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
 }
 
 .page-head-tight h1 {
-  font-size: clamp(1.85rem, 6vw, 2.4rem);
+  font-size: clamp(1.85rem, 7vw, 2.25rem);
+}
+
+.page-head.story-inner {
+  margin-bottom: 0.35rem;
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(14px);
+  transform: translateY(12px);
   transition:
-    opacity 0.55s var(--ease),
-    transform 0.55s var(--ease);
+    opacity 0.5s var(--ease),
+    transform 0.5s var(--ease);
 }
 
 .reveal.is-in {
@@ -1133,6 +1077,7 @@ tbody th {
   font-weight: 600;
   color: var(--accent);
   padding: 0.45rem 0 0;
+  min-height: 0;
 }
 
 .trim-card details.expand > summary::after {

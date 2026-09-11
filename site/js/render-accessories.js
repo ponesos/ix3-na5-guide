@@ -8,7 +8,7 @@ import {
   loadSiteContext,
   bindChrome,
 } from "./app.js";
-import { initUx, initReveal } from "./ux.js";
+import { initUx, initReveal, resetRails } from "./ux.js";
 
 const ORIGIN_KO = {
   oem: "정품",
@@ -215,6 +215,7 @@ function renderCards() {
     });
   });
   initReveal();
+  resetRails();
 }
 
 async function main() {

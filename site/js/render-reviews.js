@@ -1,5 +1,5 @@
 import { tryLoadJson, showError, loadSiteContext, bindChrome } from "./app.js";
-import { initUx, initReveal } from "./ux.js";
+import { initUx, initReveal, resetRails } from "./ux.js";
 
 function sortByDateDesc(items) {
   return [...items].sort((a, b) => (b.publishedAt || "").localeCompare(a.publishedAt || ""));
@@ -49,6 +49,7 @@ function renderCards(items) {
     })
     .join("")}</div></div>`;
   initReveal();
+  resetRails();
 }
 
 async function main() {

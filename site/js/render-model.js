@@ -6,7 +6,7 @@ import {
   loadSiteContext,
   bindChrome,
 } from "./app.js";
-import { initUx, initReveal } from "./ux.js";
+import { initUx, initReveal, resetRails } from "./ux.js";
 
 function rangeText(range) {
   if (!range?.koreaCertifiedKm) return "—";
@@ -178,6 +178,7 @@ async function main() {
     }
 
     initReveal();
+    resetRails();
   } catch (err) {
     showError(mainEl, err);
   }
