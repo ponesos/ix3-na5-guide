@@ -61,21 +61,17 @@ function renderCards() {
     root.innerHTML = `<p class="empty" style="margin:0 var(--pad)">이 분류에는 아직 질문이 없어요.</p>`;
     return;
   }
-  root.innerHTML = `<div class="rail" aria-label="FAQ"><div class="rail-track">${list
+  root.innerHTML = `<div class="rail rail-faq" aria-label="FAQ"><div class="rail-track">${list
     .map((item) => {
       const caveat = item.caveatKo ? `<p class="muted">${item.caveatKo}</p>` : "";
       const tags = (item.tags || []).map((t) => `<span class="chip">${t}</span>`).join("");
       return `<article class="rail-card rail-card-wide faq-card">
         <div class="chips"><span class="chip chip-on">${CATEGORY_KO[item.category] || item.category}</span>${tags}</div>
-        <details class="expand">
-          <summary>${item.titleKo}</summary>
-          <div class="expand-body">
-            <p class="tip-q"><strong>Q.</strong> ${item.questionKo}</p>
-            <p class="tip-a"><strong>A.</strong> ${item.answerKo}</p>
-            ${caveat}
-            ${evidenceLine(item)}
-          </div>
-        </details>
+        <strong class="rail-card-title">${item.titleKo}</strong>
+        <p class="tip-q"><strong>Q.</strong> ${item.questionKo}</p>
+        <p class="tip-a"><strong>A.</strong> ${item.answerKo}</p>
+        ${caveat}
+        ${evidenceLine(item)}
       </article>`;
     })
     .join("")}</div></div>`;

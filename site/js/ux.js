@@ -101,6 +101,26 @@ export function resetRails() {
     }
     rail.scrollLeft = 0;
   });
+  equalizeRailHeights();
+}
+
+/**
+ * Make cards in each content rail share the tallest card’s height.
+ */
+export function equalizeRailHeights() {
+  document.querySelectorAll(".rail:not(.explore-rail) .rail-track").forEach((track) => {
+    const cards = [...track.children].filter((el) => el.classList?.contains("rail-card"));
+    if (cards.length < 2) return;
+    cards.forEach((card) => {
+      card.style.minHeight = "";
+    });
+    const max = Math.max(...cards.map((card) => card.getBoundingClientRect().height));
+    if (!max || !Number.isFinite(max)) return;
+    const px = `${Math.ceil(max)}px`;
+    cards.forEach((card) => {
+      card.style.minHeight = px;
+    });
+  });
 }
 
 /**
@@ -113,6 +133,17 @@ export function initUx(opts = {}) {
   resetRails();
   requestAnimationFrame(() => {
     resetRails();
-    requestAnimationFrame(resetRails);
+    requestAnimationFrame(() => {
+      resetRails();
+      equalizeRailHeights();
+    });
   });
+  if (!window.__ix3RailResizeBound) {
+    window.__ix3RailResizeBound = true;
+    let t = 0;
+    window.addEventListener("resize", () => {
+      window.clearTimeout(t);
+      t = window.setTimeout(equalizeRailHeights, 120);
+    });
+  }
 }
